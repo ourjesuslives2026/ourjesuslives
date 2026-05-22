@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
@@ -9,8 +10,9 @@ import Quote from './components/Quote';
 import Gallery from './components/Gallery';
 import Visit from './components/Visit';
 import Footer from './components/Footer';
+import BranchDetail from './pages/BranchDetail';
 
-export default function App() {
+function HomePage() {
   return (
     <>
       <TopBar />
@@ -27,5 +29,16 @@ export default function App() {
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/branch/:id" element={<BranchDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

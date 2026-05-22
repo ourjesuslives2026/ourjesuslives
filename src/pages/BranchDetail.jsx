@@ -1,0 +1,160 @@
+import { useParams, Link } from 'react-router-dom';
+import { getBranchById, branches, langLabel } from '../data/branches';
+
+function getEmbedSrc(mapUrl) {
+  try {
+    const q = new URL(mapUrl).searchParams.get('query');
+    return `https://maps.google.com/maps?q=${encodeURIComponent(q)}&output=embed&z=15`;
+  } catch {
+    return '';
+  }
+}
+
+export default function BranchDetail() {
+  const { id } = useParams();
+  const branch = getBranchById(id);
+
+  if (!branch) {
+    return (
+      <div className="bd-notfound">
+        <h1>Branch not found</h1>
+        <Link to="/" className="btn btn--primary">← Back to Home</Link>
+      </div>
+    );
+  }
+
+  const otherBranches = branches.filter(b => b.id !== branch.id);
+  const embedSrc = getEmbedSrc(branch.mapUrl);
+
+  return (
+    <div className="bd">
+
+      {/* ── Nav back bar ── */}
+      <header className="bd__topnav">
+        <Link to="/" className="bd__back">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          All Branches
+        </Link>
+        <a href="/" className="bd__logo">
+          <img src="/assets/logo.svg" alt="Our Jesus Lives Ministry" />
+        </a>
+        <a className="btn btn--primary bd__cta" href="/#visit">Plan Your Visit ↗</a>
+      </header>
+
+      {/* ── Hero ── */}
+      <section className="bd__hero">
+        <div className="bd__hero-img">
+          <img src={branch.churchPhoto} alt={branch.shortName} />
+          <div className="bd__hero-overlay" />
+        </div>
+        <div className="bd__hero-content">
+          <div className="bd__lang-pills">
+            {branch.langs.map(l => (
+              <span key={l} className={`lang-pill lang-pill--${l}`}>{langLabel[l]}</span>
+            ))}
+          </div>
+          <h1 className="bd__hero-title">{branch.shortName}</h1>
+          <p className="bd__hero-city">{branch.city}, United Kingdom</p>
+        </div>
+      </section>
+
+      {/* ── Main content ── */}
+      <div className="bd__body">
+
+        {/* Welcome message */}
+        <section className="bd__section bd__welcome">
+          <div className="bd__section-label">Welcome</div>
+          <blockquote className="bd__welcome-text">
+            "{branch.welcome}"
+          </blockquote>
+        </section>
+
+        {/* Pastor */}
+        <section className="bd__section bd__pastor">
+          <div className="bd__section-label">Leadership</div>
+          <div className="bd__pastor-card">
+            <div className="bd__pastor-photo">
+              <img src={branch.pastoralPhoto} alt={branch.pastor} />
+            </div>
+            <div className="bd__pastor-info">
+              <div className="bd__pastor-name">{branch.pastor}</div>
+              <div className="bd__pastor-role">{branch.pastoralRole}</div>
+              <p className="bd__pastor-desc">
+                Dedicated to serving the {branch.city} community through worship,
+                teaching and pastoral care — building a church where every person
+                is known, valued, and loved.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Details meta */}
+        {branch.addr && (
+          <section className="bd__section bd__details">
+            <div className="bd__section-label">Service Info</div>
+            <div className="bd__meta-grid">
+              {branch.meta ? branch.meta.map(m => (
+                <div key={m.k} className="bd__meta-item">
+                  <span className="bd__meta-k">{m.k}</span>
+                  <span className="bd__meta-v">{m.v}</span>
+                </div>
+              )) : (
+                <div className="bd__meta-item">
+                  <span className="bd__meta-k">Address</span>
+                  <span className="bd__meta-v">{branch.addr}</span>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* Map */}
+        <section className="bd__section bd__map-section">
+          <div className="bd__section-label">Location</div>
+          <div className="bd__map-wrap">
+            <iframe
+              src={embedSrc}
+              title={`Map — ${branch.shortName}`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <a
+            href={branch.mapUrl}
+            target="_blank"
+            rel="noopener"
+            className="btn btn--ghost bd__map-open"
+          >
+            Open in Google Maps →
+          </a>
+        </section>
+      </div>
+
+      {/* ── Other branches ── */}
+      <section className="bd__other">
+        <div className="bd__other-inner">
+          <h2 className="bd__other-title">Other Branches</h2>
+          <div className="bd__other-grid">
+            {otherBranches.map(b => (
+              <Link key={b.id} to={`/branch/${b.id}`} className="bd__other-card">
+                {b.stripe && <div className="bd__other-stripe" style={{ background: b.stripe }} />}
+                <div className="bd__other-langs">
+                  {b.langs.map(l => (
+                    <span key={l} className={`lang-pill lang-pill--${l} lang-pill--sm`}>{langLabel[l]}</span>
+                  ))}
+                </div>
+                <div className="bd__other-name">{b.shortName}</div>
+                <div className="bd__other-city">{b.city}</div>
+                <span className="bd__other-link">View Details →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}

@@ -882,3 +882,211 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   .hero__chips-inline { display: none; }
   .hero--full { min-height: 560px; }
 }
+
+/* ─────────────────────────────────────────
+   BRANCH DETAIL PAGE
+───────────────────────────────────────── */
+.bd { min-height: 100vh; background: var(--c-bg); }
+
+/* Top nav */
+.bd__topnav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--c-line);
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad);
+  gap: 16px;
+}
+.bd__back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--c-ink-2);
+  transition: color 0.2s;
+}
+.bd__back:hover { color: var(--c-ink); }
+.bd__logo { display: flex; align-items: center; }
+.bd__logo img { height: 48px; width: auto; }
+.bd__cta { height: 36px; padding: 0 16px; font-size: 13px; }
+
+/* Hero */
+.bd__hero {
+  position: relative; height: 60vh; min-height: 380px;
+  overflow: hidden; background: var(--c-ink);
+}
+.bd__hero-img {
+  position: absolute; inset: 0;
+}
+.bd__hero-img img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+  display: block;
+}
+.bd__hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(16,24,40,0.85) 0%, rgba(16,24,40,0.3) 60%, transparent 100%);
+}
+.bd__hero-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: clamp(24px, 4vw, 56px) var(--pad) clamp(32px, 5vw, 64px);
+  color: var(--c-cream);
+}
+.bd__lang-pills { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.bd__hero-title {
+  font-family: var(--f-serif);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400; line-height: 1.05;
+  font-synthesis: none;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+  margin-bottom: 8px;
+}
+.bd__hero-city {
+  font-family: var(--f-mono); font-size: 13px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+
+/* Body */
+.bd__body {
+  max-width: 860px; margin: 0 auto;
+  padding: 0 var(--pad) 80px;
+  display: flex; flex-direction: column; gap: 64px;
+}
+.bd__section { padding-top: 64px; border-top: 1px solid var(--c-line); }
+.bd__section:first-child { border-top: none; }
+.bd__section-label {
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--c-muted); margin-bottom: 24px;
+}
+
+/* Welcome */
+.bd__welcome-text {
+  font-family: var(--f-serif);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-style: italic; font-weight: 400;
+  line-height: 1.55; color: var(--c-ink);
+  margin: 0; font-synthesis: none;
+  border-left: 3px solid var(--c-gold);
+  padding-left: 28px;
+}
+
+/* Pastor */
+.bd__pastor-card {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 40px; align-items: start;
+}
+.bd__pastor-photo {
+  width: 200px; height: 240px;
+  border-radius: 12px; overflow: hidden;
+  background: var(--c-line);
+}
+.bd__pastor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.bd__pastor-name {
+  font-family: var(--f-serif); font-size: 24px;
+  font-weight: 400; color: var(--c-ink); margin-bottom: 4px;
+  font-synthesis: none;
+}
+.bd__pastor-role {
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--c-muted); margin-bottom: 16px;
+}
+.bd__pastor-desc { color: var(--c-ink-2); line-height: 1.7; margin: 0; }
+
+/* Service info */
+.bd__meta-grid { display: flex; flex-direction: column; gap: 0; }
+.bd__meta-item {
+  display: grid; grid-template-columns: 160px 1fr;
+  padding: 16px 0; border-bottom: 1px dashed var(--c-line);
+  gap: 16px; align-items: baseline;
+}
+.bd__meta-k {
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--c-muted);
+}
+.bd__meta-v {
+  font-family: var(--f-serif); font-style: italic; font-size: 18px;
+  color: var(--c-ink); font-synthesis: none;
+}
+
+/* Map */
+.bd__map-wrap {
+  width: 100%; height: 420px;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--c-line);
+  margin-bottom: 16px;
+}
+.bd__map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+.bd__map-open { display: inline-flex; }
+
+/* Other branches */
+.bd__other {
+  background: var(--c-ink);
+  padding: 80px 0;
+}
+.bd__other-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+}
+.bd__other-title {
+  font-family: var(--f-serif); font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400; color: var(--c-cream);
+  margin-bottom: 40px; font-synthesis: none;
+}
+.bd__other-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.bd__other-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 6px;
+  position: relative; overflow: hidden;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.bd__other-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+.bd__other-stripe {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.bd__other-langs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 4px; }
+.lang-pill--sm { font-size: 9px !important; padding: 3px 7px !important; }
+.bd__other-name {
+  font-family: var(--f-serif); font-size: 18px;
+  font-weight: 400; color: var(--c-cream); line-height: 1.2;
+  font-synthesis: none;
+}
+.bd__other-city {
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.bd__other-link {
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--c-gold); margin-top: 12px;
+}
+
+/* Detail page responsive */
+@media (max-width: 760px) {
+  .bd__pastor-card { grid-template-columns: 1fr; }
+  .bd__pastor-photo { width: 100%; height: 220px; }
+  .bd__meta-item { grid-template-columns: 120px 1fr; }
+  .bd__map-wrap { height: 300px; }
+  .bd__other-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .bd__other-grid { grid-template-columns: 1fr; }
+}
+
+/* Not found */
+.bd-notfound {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 24px;
+  font-family: var(--f-serif);
+}

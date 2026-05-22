@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
+import { branches, langLabel } from '../data/branches';
 
 const MapPin = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14">
@@ -9,97 +11,6 @@ const MapPin = () => (
   </svg>
 );
 
-const branches = [
-  {
-    id: 'sheffield-main',
-    feature: true,
-    langs: ['ml', 'en'],
-    flag: 'Main Branch',
-    name: 'Sheffield Christian\nFellowship',
-    desc: 'The main Sheffield branch — worship, teaching, prayer and fellowship for the whole family. Where this ministry began, and where it returns home each Sunday.',
-    meta: [
-      { k: 'Sunday', v: '10:30am' },
-      { k: 'Address', v: 'A6135, Sheffield S5 7AF' },
-    ],
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Sheffield+Christian+Fellowship+S5+7AF',
-    photo: '/assets/sheffield-fellowship.jpg',
-    photoAlt: 'Pastor Renjit, Anu and their daughter at Sheffield Christian Fellowship',
-  },
-  {
-    id: 'sheffield-tamil',
-    langs: ['ta'],
-    stripe: 'var(--c-red)',
-    name: 'Sheffield Tamil Church',
-    desc: 'Tamil worship and fellowship in Sheffield, for families seeking a Tamil-speaking church community.',
-    addr: 'Sheffield, South Yorkshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Sheffield+Tamil+Church+Sheffield+UK',
-  },
-  {
-    id: 'sheffield-hindi',
-    langs: ['hi'],
-    stripe: 'var(--c-yellow)',
-    name: 'Sheffield Hindi Church',
-    desc: 'Hindi worship and fellowship in Sheffield for the Hindi-speaking community.',
-    addr: 'Sheffield, South Yorkshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Sheffield+Hindi+Church+Sheffield+UK',
-  },
-  {
-    id: 'scunthorpe',
-    langs: ['en', 'ml'],
-    stripe: 'var(--c-gold)',
-    name: 'Scunthorpe Christian Fellowship',
-    desc: 'Serving the Scunthorpe community through worship, prayer and Christian fellowship.',
-    addr: 'Scunthorpe, North Lincolnshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Scunthorpe+Christian+Fellowship+Scunthorpe+UK',
-  },
-  {
-    id: 'tipton',
-    langs: ['en', 'ml'],
-    stripe: 'var(--c-green)',
-    name: 'Tipton Christian Fellowship',
-    desc: 'Serving the Tipton and West Midlands community through worship, prayer and fellowship.',
-    addr: 'Tipton, West Midlands',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Tipton+Christian+Fellowship+Tipton+West+Midlands+UK',
-  },
-  {
-    id: 'barnsley',
-    langs: ['en'],
-    stripe: 'var(--c-green)',
-    name: 'Barnsley Christian Church',
-    desc: 'Serving the Barnsley community through local worship and fellowship.',
-    addr: 'Barnsley, South Yorkshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Barnsley+Christian+Church+Barnsley+UK',
-  },
-  {
-    id: 'chesterfield',
-    langs: ['en'],
-    stripe: 'var(--c-blue)',
-    name: 'Chesterfield Christian Church',
-    desc: 'Serving the Chesterfield community through worship, prayer, and fellowship.',
-    addr: 'Chesterfield, Derbyshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Chesterfield+Christian+Church+Chesterfield+UK',
-  },
-  {
-    id: 'doncaster',
-    langs: ['en'],
-    stripe: 'var(--c-red)',
-    name: 'Doncaster Christian Church',
-    desc: 'Serving the Doncaster community through local worship and fellowship.',
-    addr: 'Doncaster, South Yorkshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Doncaster+Christian+Church+Doncaster+UK',
-  },
-  {
-    id: 'mansfield',
-    langs: ['en', 'ml'],
-    stripe: 'var(--c-blue)',
-    name: 'Mansfield Christian Fellowship',
-    desc: 'Serving the Mansfield community with worship, teaching, and local fellowship.',
-    addr: 'Mansfield, Nottinghamshire',
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Mansfield+Christian+Fellowship+Mansfield+UK',
-  },
-];
-
-const langLabel = { ml: 'Malayalam', ta: 'Tamil', hi: 'Hindi', en: 'English' };
 
 function getEmbedSrc(mapUrl) {
   try {
@@ -181,7 +92,7 @@ function FeatureCard({ b, hidden, onOpenMap }) {
           </div>
         )}
         <div className="branch-card__actions">
-          <a className="link-arrow" href="#">View Details <span>→</span></a>
+          <Link className="link-arrow" to={`/branch/${b.id}`}>View Details <span>→</span></Link>
           <button className="map-link" onClick={() => onOpenMap(b)}>
             <MapPin /> Open in Maps
           </button>
@@ -206,7 +117,7 @@ function BranchCard({ b, hidden, onOpenMap }) {
           </div>
         )}
         <div className="branch-card__actions">
-          <a className="link-arrow" href="#">Details <span>→</span></a>
+          <Link className="link-arrow" to={`/branch/${b.id}`}>Details <span>→</span></Link>
           <button className="map-link" onClick={() => onOpenMap(b)}>
             <MapPin /> Maps
           </button>
