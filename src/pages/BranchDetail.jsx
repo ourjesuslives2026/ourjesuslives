@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getBranchById, branches, langLabel } from '../data/branches';
+import TopBar from '../components/TopBar';
+import Nav from '../components/Nav';
 
 function getEmbedSrc(mapUrl) {
   try {
@@ -26,22 +29,28 @@ export default function BranchDetail() {
   const otherBranches = branches.filter(b => b.id !== branch.id);
   const embedSrc = getEmbedSrc(branch.mapUrl);
 
+  // Keep nav in solid (non-transparent) state on detail pages
+  useEffect(() => {
+    document.body.classList.add('nav-solid', 'nav-scrolled');
+    return () => document.body.classList.remove('nav-solid', 'nav-scrolled');
+  }, []);
+
   return (
     <div className="bd">
+      <TopBar />
+      <Nav />
 
-      {/* ── Nav back bar ── */}
-      <header className="bd__topnav">
+      {/* ── Breadcrumb ── */}
+      <div className="bd__breadcrumb">
         <Link to="/" className="bd__back">
-          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 12H5M12 5l-7 7 7 7"/>
           </svg>
           All Branches
         </Link>
-        <a href="/" className="bd__logo">
-          <img src="/assets/logo.svg" alt="Our Jesus Lives Ministry" />
-        </a>
-        <a className="btn btn--primary bd__cta" href="/#visit">Plan Your Visit ↗</a>
-      </header>
+        <span className="bd__breadcrumb-sep">/</span>
+        <span className="bd__breadcrumb-cur">{branch.shortName}</span>
+      </div>
 
       {/* ── Hero ── */}
       <section className="bd__hero">

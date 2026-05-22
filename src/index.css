@@ -201,12 +201,14 @@ body:not(.nav-scrolled) .nav__menu-btn span { background: var(--c-cream); }
   width: 100%; height: 100%; display: block;
   transition: filter 0.3s ease;
 }
-body:not(.nav-scrolled) .nav__logo img,
-body:not(.nav-scrolled) .nav__logo svg {
+body:not(.nav-scrolled):not(.nav-solid) .nav__logo img,
+body:not(.nav-scrolled):not(.nav-solid) .nav__logo svg {
   filter: brightness(0) invert(1);
 }
 body.nav-scrolled .nav__logo img,
-body.nav-scrolled .nav__logo svg {
+body.nav-scrolled .nav__logo svg,
+body.nav-solid .nav__logo img,
+body.nav-solid .nav__logo svg {
   filter: none;
 }
 .nav__wordmark { display: flex; flex-direction: column; line-height: 1.1; white-space: nowrap; }
@@ -888,28 +890,21 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 ───────────────────────────────────────── */
 .bd { min-height: 100vh; background: var(--c-bg); }
 
-/* Top nav */
-.bd__topnav {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* Breadcrumb */
+.bd__breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px var(--pad);
+  font-family: var(--f-mono); font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
   border-bottom: 1px solid var(--c-line);
-  height: var(--nav-h);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 var(--pad);
-  gap: 16px;
 }
 .bd__back {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--c-ink-2);
-  transition: color 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--c-ink-2); transition: color 0.2s;
 }
 .bd__back:hover { color: var(--c-ink); }
-.bd__logo { display: flex; align-items: center; }
-.bd__logo img { height: 48px; width: auto; }
-.bd__cta { height: 36px; padding: 0 16px; font-size: 13px; }
+.bd__breadcrumb-sep { color: var(--c-line); }
+.bd__breadcrumb-cur { color: var(--c-ink); }
 
 /* Hero */
 .bd__hero {
