@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
 
 const MapPin = () => (
@@ -101,6 +101,55 @@ const branches = [
 
 const langLabel = { ml: 'Malayalam', ta: 'Tamil', hi: 'Hindi', en: 'English' };
 
+function getEmbedSrc(mapUrl) {
+  try {
+    const q = new URL(mapUrl).searchParams.get('query');
+    return `https://maps.google.com/maps?q=${encodeURIComponent(q)}&output=embed&z=15`;
+  } catch {
+    return '';
+  }
+}
+
+function MapModal({ branch, onClose }) {
+  const embedSrc = getEmbedSrc(branch.mapUrl);
+  const displayName = branch.name.replace('\n', ' ');
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div className="map-modal" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="map-modal__panel">
+        <div className="map-modal__head">
+          <span className="map-modal__title">{displayName}</span>
+          <button className="map-modal__close" onClick={onClose} aria-label="Close map">✕</button>
+        </div>
+        <div className="map-modal__frame">
+          <iframe
+            src={embedSrc}
+            title={`Map — ${displayName}`}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+        <div className="map-modal__foot">
+          <a href={branch.mapUrl} target="_blank" rel="noopener" className="btn btn--ghost">
+            Open in Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function LangPills({ langs }) {
   return (
     <div className="branch-card__langs">
@@ -111,7 +160,7 @@ function LangPills({ langs }) {
   );
 }
 
-function FeatureCard({ b, hidden }) {
+function FeatureCard({ b, hidden, onOpenMap }) {
   return (
     <article className={`branch-card branch-card--feature${hidden ? ' is-hidden' : ''}`} data-langs={b.langs.join(' ')}>
       <div className="branch-card__photo">
@@ -133,16 +182,16 @@ function FeatureCard({ b, hidden }) {
         )}
         <div className="branch-card__actions">
           <a className="link-arrow" href="#">View Details <span>→</span></a>
-          <a className="map-link" href={b.mapUrl} target="_blank" rel="noopener">
+          <button className="map-link" onClick={() => onOpenMap(b)}>
             <MapPin /> Open in Maps
-          </a>
+          </button>
         </div>
       </div>
     </article>
   );
 }
 
-function BranchCard({ b, hidden }) {
+function BranchCard({ b, hidden, onOpenMap }) {
   return (
     <article className={`branch-card${hidden ? ' is-hidden' : ''}`} data-langs={b.langs.join(' ')}>
       {b.stripe && <div className="branch-card__stripe" style={{ background: b.stripe }} />}
@@ -158,9 +207,9 @@ function BranchCard({ b, hidden }) {
         )}
         <div className="branch-card__actions">
           <a className="link-arrow" href="#">Details <span>→</span></a>
-          <a className="map-link" href={b.mapUrl} target="_blank" rel="noopener">
+          <button className="map-link" onClick={() => onOpenMap(b)}>
             <MapPin /> Maps
-          </a>
+          </button>
         </div>
       </div>
     </article>
@@ -169,6 +218,7 @@ function BranchCard({ b, hidden }) {
 
 export default function Branches() {
   const [filter, setFilter] = useState('all');
+  const [mapBranch, setMapBranch] = useState(null);
   const headRef = useReveal();
   const gridRef = useReveal();
   const mapRef = useReveal();
@@ -212,8 +262,8 @@ export default function Branches() {
           {branches.map(b => {
             const hidden = filter !== 'all' && !b.langs.includes(filter);
             return b.feature
-              ? <FeatureCard key={b.id} b={b} hidden={hidden} />
-              : <BranchCard key={b.id} b={b} hidden={hidden} />;
+              ? <FeatureCard key={b.id} b={b} hidden={hidden} onOpenMap={setMapBranch} />
+              : <BranchCard key={b.id} b={b} hidden={hidden} onOpenMap={setMapBranch} />;
           })}
         </div>
 
@@ -227,6 +277,8 @@ export default function Branches() {
           </div>
         </div>
       </div>
+
+      {mapBranch && <MapModal branch={mapBranch} onClose={() => setMapBranch(null)} />}
     </section>
   );
 }
