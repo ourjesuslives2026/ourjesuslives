@@ -1,0 +1,72 @@
+import { useState } from 'react';
+import { useReveal } from '../hooks/useReveal';
+
+const cells = [
+  { cat: 'worship', tall: true, tag: 'Worship', desc: 'Hands raised, Sheffield Sunday worship' },
+  { cat: 'kids', tag: 'Children', desc: 'Sunday school craft circle' },
+  { cat: 'family', tag: 'Family', desc: 'Fellowship lunch, full hall' },
+  { cat: 'outreach', wide: true, tag: 'Outreach', desc: 'Care & Share food distribution, Tipton' },
+  { cat: 'branches', tag: 'Branch', desc: 'Mansfield fellowship — Sunday gathering' },
+  { cat: 'worship', tall: true, tag: 'Worship', desc: 'Worship team — guitar, vocals, prayer' },
+  { cat: 'kids', tag: 'Children', desc: "Children's nativity, Christmas" },
+  { cat: 'family', tag: 'Family', desc: 'Baptism Sunday — whole family rejoicing' },
+  { cat: 'branches', tag: 'Branch', desc: 'Scunthorpe — Sunday worship hall exterior' },
+];
+
+const filters = [
+  { key: 'all', label: 'All' },
+  { key: 'worship', label: 'Worship' },
+  { key: 'kids', label: 'Children' },
+  { key: 'family', label: 'Church Family' },
+  { key: 'outreach', label: 'Outreach' },
+  { key: 'branches', label: 'Branches' },
+];
+
+export default function Gallery() {
+  const [cat, setCat] = useState('all');
+  const headRef = useReveal();
+  const masonryRef = useReveal();
+
+  return (
+    <section className="gallery" id="gallery">
+      <div className="container">
+        <div className="gallery__head reveal" ref={headRef}>
+          <div>
+            <span className="section-num">05 — Gallery</span>
+            <h2 className="h-display">Life at our ministry.</h2>
+          </div>
+          <div className="gallery__filter">
+            {filters.map(f => (
+              <button
+                key={f.key}
+                className={`chip${cat === f.key ? ' chip--active' : ''}`}
+                onClick={() => setCat(f.key)}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="masonry reveal" ref={masonryRef}>
+          {cells.map((c, i) => (
+            <div
+              key={i}
+              className={`m-cell${c.tall ? ' m-cell--tall' : ''}${c.wide ? ' m-cell--wide' : ''}${cat !== 'all' && c.cat !== cat ? ' is-hidden' : ''}`}
+              data-cat={c.cat}
+            >
+              <div className="m-cell__inner">
+                <span className="m-cell__tag">{c.tag}</span>
+                <span className="m-cell__desc">{c.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="gallery__cta">
+          <a className="btn btn--ghost" href="#">View Full Gallery →</a>
+        </div>
+      </div>
+    </section>
+  );
+}
