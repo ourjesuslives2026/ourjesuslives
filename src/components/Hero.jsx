@@ -1,13 +1,65 @@
+import { useEffect, useState } from 'react';
+
+const slides = [
+  {
+    src: '/assets/hero.jpg',
+    alt: 'Worship gathering — congregation in a sunlit church hall',
+  },
+  {
+    src: '/assets/hero2.jpg',
+    alt: 'Congregation with hands raised in worship before a glowing cross',
+  },
+];
+
 const marqueeItems = [
   'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Media Ministry',
   'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Media Ministry',
 ];
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+  const [prev, setPrev] = useState(null);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPrev(current);
+      setFading(true);
+      setCurrent(c => (c + 1) % slides.length);
+      setTimeout(() => {
+        setPrev(null);
+        setFading(false);
+      }, 1000);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [current]);
+
+  const goTo = (idx) => {
+    if (idx === current) return;
+    setPrev(current);
+    setFading(true);
+    setCurrent(idx);
+    setTimeout(() => { setPrev(null); setFading(false); }, 1000);
+  };
+
   return (
     <section className="hero--full">
-      <div className="hero__bg">
-        <img src="/assets/hero.jpg" alt="Worship gathering — congregation in a sunlit church hall" />
+      {/* Background slideshow */}
+      <div className="hero__bg" aria-hidden="true">
+        {prev !== null && (
+          <img
+            key={`prev-${prev}`}
+            src={slides[prev].src}
+            alt=""
+            className="hero__slide hero__slide--out"
+          />
+        )}
+        <img
+          key={`cur-${current}`}
+          src={slides[current].src}
+          alt={slides[current].alt}
+          className={`hero__slide hero__slide--in${fading ? ' hero__slide--entering' : ''}`}
+        />
       </div>
 
       <div className="hero__grid-full">
@@ -45,6 +97,18 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Slide dots */}
+      <div className="hero__dots" aria-label="Slideshow navigation">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            className={`hero__dot${i === current ? ' hero__dot--active' : ''}`}
+            onClick={() => goTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
       </div>
 
       <span className="hero__scroll">Scroll · Our Story</span>
