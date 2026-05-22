@@ -52,7 +52,6 @@ export default function Ministries() {
     <section className="ministries" id="ministries">
       <div className="container">
         <div className="ministries__head reveal" ref={headRef}>
-          <span className="section-num">04 — Ministries</span>
           <h2 className="h-display">Ministries that serve <em>every generation.</em></h2>
           <p className="lead lead--tight">
             Our ministries help individuals, families, children, youth and communities

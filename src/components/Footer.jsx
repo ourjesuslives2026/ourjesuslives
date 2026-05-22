@@ -9,7 +9,6 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top reveal" ref={topRef}>
           <div className="footer__head">
-            <span className="section-num">07 — Contact</span>
             <h2 className="h-display h-display--xl">We'll be happy<br />to <em>help.</em></h2>
           </div>
           <div className="footer__contact">

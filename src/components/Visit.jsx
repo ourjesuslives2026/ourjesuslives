@@ -14,7 +14,6 @@ export default function Visit() {
       <div className="container">
         <div className="visit__grid reveal" ref={ref}>
           <div className="visit__lead">
-            <span className="section-num section-num--light">06 — Plan Your Visit</span>
             <h2 className="h-display h-display--light">
               Visiting for the<br />first time?
             </h2>

@@ -22,7 +22,6 @@ export default function Story() {
           </div>
 
           <div className="story__copy">
-            <span className="section-num section-num--light">03 — Our Story</span>
             <h2 className="h-display h-display--light">
               From a single<br />fellowship to<br />
               a family of <em>nine.</em>

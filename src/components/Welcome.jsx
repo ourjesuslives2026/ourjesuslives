@@ -7,7 +7,6 @@ export default function Welcome() {
       <div className="container">
         <div className="welcome__grid reveal" ref={ref}>
           <div className="welcome__left">
-            <span className="section-num">01 — Welcome</span>
             <h2 className="h-display">
               A place to <em>worship,</em><br />
               grow, and <em>belong.</em>

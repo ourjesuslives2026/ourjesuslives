@@ -32,7 +32,6 @@ export default function Gallery() {
       <div className="container">
         <div className="gallery__head reveal" ref={headRef}>
           <div>
-            <span className="section-num">05 — Gallery</span>
             <h2 className="h-display">Life at our ministry.</h2>
           </div>
           <div className="gallery__filter">

@@ -186,7 +186,6 @@ export default function Branches() {
       <div className="container">
         <div className="branches__head reveal" ref={headRef}>
           <div>
-            <span className="section-num">02 — Branches</span>
             <h2 className="h-display">Find a branch <em>near you.</em></h2>
             <p className="lead lead--tight">
               We gather in nine communities across the UK — each one a local family,
