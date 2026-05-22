@@ -111,7 +111,6 @@ export default function Hero() {
         ))}
       </div>
 
-      <span className="hero__scroll">Scroll · Our Story</span>
 
       <div className="marquee" aria-hidden="true">
         <div className="marquee__track">
