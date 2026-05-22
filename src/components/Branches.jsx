@@ -223,7 +223,7 @@ export default function Branches() {
               <strong>Nine branches.</strong> One family. One hope in Jesus —
               from Sheffield down to Tipton and across the Midlands &amp; North.
             </div>
-            <a className="btn btn--ghost" href="#">See all locations on a map →</a>
+            <a className="btn btn--ghost" href="https://www.google.com/maps/d/viewer?mid=18w3ataCOELqtchRuXAhoVwobovtd0Gk" target="_blank" rel="noopener">See all locations on a map →</a>
           </div>
         </div>
       </div>
