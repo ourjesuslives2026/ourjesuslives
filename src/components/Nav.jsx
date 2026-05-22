@@ -85,7 +85,7 @@ export default function Nav() {
           {navLinks.map(l => (
             <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>{l.label}</a>
           ))}
-          <a className="btn btn--primary" href="#visit" onClick={() => setDrawerOpen(false)}>Plan Your Visit ↗</a>
+          <a className="btn btn--primary" href="#visit" onClick={() => setDrawerOpen(false)}>Plan Your Visit &rarr;</a>
         </div>
       </div>
     </>
