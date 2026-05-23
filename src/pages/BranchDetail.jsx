@@ -40,17 +40,6 @@ export default function BranchDetail() {
       <TopBar />
       <Nav />
 
-      {/* ── Breadcrumb ── */}
-      <div className="bd__breadcrumb">
-        <Link to="/" className="bd__back">
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 12H5M12 5l-7 7 7 7"/>
-          </svg>
-          All Branches
-        </Link>
-        <span className="bd__breadcrumb-sep">/</span>
-        <span className="bd__breadcrumb-cur">{branch.shortName}</span>
-      </div>
 
       {/* ── Hero ── */}
       <section className="bd__hero">
