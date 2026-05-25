@@ -68,11 +68,30 @@ export default function ContactPage() {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setSending(true);
-    // Simulate send — wire up to Formspree / EmailJS / your backend here
-    await new Promise(r => setTimeout(r, 1000));
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: 'f5141fb1-45c8-4623-b7b4-b5c31ab8a93f',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          subject: `[Our Jesus Lives] ${form.subject}`,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setForm(INITIAL);
+      } else {
+        alert('Something went wrong. Please try again or email us directly.');
+      }
+    } catch {
+      alert('Network error. Please check your connection and try again.');
+    }
     setSending(false);
-    setSubmitted(true);
-    setForm(INITIAL);
   };
 
   return (
