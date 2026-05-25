@@ -2,42 +2,28 @@ import { useReveal } from '../hooks/useReveal';
 
 const ministries = [
   {
-    idx: '01', featured: true,
-    icon: <svg viewBox="0 0 48 48"><path d="M24 4v18M24 22l8-8M24 22l-8-8M8 30c4-3 8-3 16-3s12 0 16 3M8 30v10h32V30" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>,
-    title: 'Worship & Sunday Services',
-    body: 'Gather with us for worship, prayer, Bible teaching, and fellowship every Sunday across our branches.',
-    tag: 'Weekly · All ages',
-  },
-  {
-    idx: '02',
-    icon: <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="6" stroke="currentColor" strokeWidth="2" fill="none"/><path d="M10 40c2-8 8-12 14-12s12 4 14 12" stroke="currentColor" strokeWidth="2" fill="none"/></svg>,
-    title: "Children's Ministry",
-    body: 'Helping children grow in faith through age-appropriate teaching, care, and encouragement.',
-    tag: 'Ages 3–11',
-  },
-  {
-    idx: '03',
+    idx: '01',
     icon: <svg viewBox="0 0 48 48"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/><path d="M18 36v-8h12v8" stroke="currentColor" strokeWidth="2" fill="none"/></svg>,
     title: 'Youth Ministry',
     body: 'Encouraging young people to build strong faith, purpose, and character.',
     tag: 'Ages 12–24',
   },
   {
-    idx: '04',
+    idx: '02',
     icon: <svg viewBox="0 0 48 48"><path d="M24 8v32M16 16v16M32 16v16M8 24h32" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>,
     title: 'Prayer Ministry',
     body: 'Standing together in prayer for families, individuals, churches, and communities.',
     tag: 'Weekly + on-request',
   },
   {
-    idx: '05',
+    idx: '03', featured: true,
     icon: <svg viewBox="0 0 48 48"><path d="M24 40s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/></svg>,
     title: 'Care & Share / Charity',
     body: 'Supporting people in need through compassion, generosity, and practical care.',
     tag: 'Year-round',
   },
   {
-    idx: '06',
+    idx: '04',
     icon: <svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><path d="M20 38h8M18 42h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M20 18l8 4-8 4z" fill="currentColor"/></svg>,
     title: 'Social Media Ministry',
     body: 'Sharing the message of Jesus through digital platforms, teaching resources and online content.',
