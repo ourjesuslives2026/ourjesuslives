@@ -30,8 +30,6 @@ const filters = [
   { key: 'worship',  label: 'Worship' },
   { key: 'outreach', label: 'Outreach' },
   { key: 'branches', label: 'Branches' },
-  { key: 'family',   label: 'Family' },
-  { key: 'kids',     label: 'Children' },
 ];
 
 export default function GalleryPage() {
