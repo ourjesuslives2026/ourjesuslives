@@ -736,7 +736,10 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 .ministry-card h3 { font-family: var(--f-serif); font-size: clamp(24px, 2vw, 30px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 12px; font-synthesis: none; }
 .ministry-card p { font-size: 15px; line-height: 1.55; color: var(--c-muted); margin-bottom: 20px; flex: 1; }
 .ministry-card__tag { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-gold-d); padding-top: 16px; border-top: 1px dashed var(--c-line); }
-.ministry-card--lg .ministry-card__icon { background: var(--c-ink); color: var(--c-gold); }
+.ministry-card--lg { grid-column: 1 / -1; flex-direction: row; align-items: flex-start; gap: 48px; min-height: 240px; }
+.ministry-card--lg .ministry-card__icon { background: var(--c-ink); color: var(--c-gold); flex-shrink: 0; width: 72px; height: 72px; }
+.ministry-card--lg h3 { font-size: clamp(28px, 3vw, 42px); }
+.ministry-card--lg p { font-size: 17px; max-width: 60ch; }
 
 /* QUOTE */
 .quote { padding: clamp(60px, 10vw, 130px) 0 0; background: var(--c-cream-2); text-align: center; position: relative; overflow: hidden; }
@@ -874,6 +877,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   .branch-card--feature { grid-column: span 1; flex-direction: column; }
   .branch-card--feature .branch-card__photo { min-height: 240px; }
   .ministry-grid { grid-template-columns: 1fr; }
+  .ministry-card--lg { flex-direction: column; gap: 0; }
   .visit__grid { grid-template-columns: 1fr; }
   .visit__cards { grid-template-columns: 1fr; }
   .masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }

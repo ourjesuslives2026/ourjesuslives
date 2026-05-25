@@ -2,25 +2,25 @@ import { useReveal } from '../hooks/useReveal';
 
 const ministries = [
   {
-    idx: '01',
+    idx: '01', featured: true,
+    icon: <svg viewBox="0 0 48 48"><path d="M24 40s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/></svg>,
+    title: 'Care & Share / Charity',
+    body: 'Supporting people in need through compassion, generosity, and practical care.',
+    tag: 'Year-round',
+  },
+  {
+    idx: '02',
     icon: <svg viewBox="0 0 48 48"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/><path d="M18 36v-8h12v8" stroke="currentColor" strokeWidth="2" fill="none"/></svg>,
     title: 'Youth Ministry',
     body: 'Encouraging young people to build strong faith, purpose, and character.',
     tag: 'Ages 12–24',
   },
   {
-    idx: '02',
+    idx: '03',
     icon: <svg viewBox="0 0 48 48"><path d="M24 8v32M16 16v16M32 16v16M8 24h32" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>,
     title: 'Prayer Ministry',
     body: 'Standing together in prayer for families, individuals, churches, and communities.',
     tag: 'Weekly + on-request',
-  },
-  {
-    idx: '03', featured: true,
-    icon: <svg viewBox="0 0 48 48"><path d="M24 40s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/></svg>,
-    title: 'Care & Share / Charity',
-    body: 'Supporting people in need through compassion, generosity, and practical care.',
-    tag: 'Year-round',
   },
   {
     idx: '04',
