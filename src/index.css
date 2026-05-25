@@ -8,8 +8,8 @@
   --c-paper:  #FAF8F3;
   --c-line:   rgba(16,24,40,0.12);
   --c-muted:  #5a6377;
-  --c-gold:   #C8954E;
-  --c-gold-d: #A87637;
+  --c-gold:   #0056A8;
+  --c-gold-d: #004490;
   --c-red:    #C8341F;
   --c-burg:   #7A2018;
   --c-ml:     #C8341F;
@@ -694,12 +694,12 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 .branch-card--feature .branch-card__body { flex: 1; padding: 36px 36px 32px; display: flex; flex-direction: column; }
 .branch-card--feature h3 { font-size: clamp(34px, 3.4vw, 52px); margin: 20px 0 18px; }
 .branch-card--feature p { color: rgba(245,239,227,0.7); font-size: 16px; }
-.branch-card--feature .branch-card__flag { background: rgba(200,149,78,0.2); color: var(--c-gold); }
+.branch-card--feature .branch-card__flag { background: rgba(0,86,168,0.15); color: var(--c-gold); }
 .branch-card--feature .branch-card__meta { border-color: rgba(245,239,227,0.18); }
 .branch-card--feature .branch-card__meta .k { color: rgba(245,239,227,0.5); }
 .branch-card--feature .link-arrow { color: var(--c-gold); border-color: var(--c-gold); }
 .branch-card--feature .map-link { color: rgba(245,239,227,0.7); border-color: rgba(245,239,227,0.22); }
-.branch-card--feature .map-link:hover { color: var(--c-gold); border-color: var(--c-gold); background: rgba(200,149,78,0.1); }
+.branch-card--feature .map-link:hover { color: var(--c-gold); border-color: var(--c-gold); background: rgba(0,86,168,0.08); }
 .branch-card--feature:hover { transform: translateY(-2px); }
 
 .branches__map { margin-top: 40px; }
