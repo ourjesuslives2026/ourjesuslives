@@ -231,6 +231,7 @@ body.nav-solid .nav__logo svg {
 .nav__links a {
   padding: 10px 14px;
   border-radius: 999px;
+  font-family: var(--f-sans);
   font-size: 16px;
   font-weight: 500;
   color: var(--c-ink-2);
@@ -242,8 +243,8 @@ body.nav-solid .nav__logo svg {
 body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0.14); color: var(--c-cream); }
 
 .nav__cta-wrap { display: flex; align-items: center; gap: 10px; }
-.nav__cta-wrap .btn { height: 36px; padding: 0 16px; font-size: 16px; line-height: 1; }
-.nav__cta-wrap .btn--ghost-sm { height: 36px; padding: 0 14px; font-size: 16px; line-height: 1; }
+.nav__cta-wrap .btn { height: 36px; padding: 0 16px; font-size: 16px; font-family: var(--f-sans); line-height: 1; }
+.nav__cta-wrap .btn--ghost-sm { height: 36px; padding: 0 14px; font-size: 16px; font-family: var(--f-sans); letter-spacing: normal; line-height: 1; }
 .nav__menu-btn {
   display: none;
   width: 44px; height: 44px;
