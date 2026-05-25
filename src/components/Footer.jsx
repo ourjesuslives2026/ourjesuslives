@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="footer__verse">"Jesus Christ is the same yesterday and today and forever." — Hebrews 13:8</div>
         </div>
 
-        <div className="footer__giant" aria-hidden="true">JESUS LIVES</div>
+        <div className="footer__giant" aria-hidden="true">INHERITANCE</div>
       </div>
     </footer>
   );
