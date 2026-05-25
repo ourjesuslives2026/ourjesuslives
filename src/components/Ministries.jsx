@@ -5,8 +5,13 @@ const ministries = [
     idx: '01', featured: true,
     icon: <svg viewBox="0 0 48 48"><path d="M24 40s-14-8-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 12-14 20-14 20z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/></svg>,
     title: 'Care & Share / Charity',
-    body: 'Supporting people in need through compassion, generosity, and practical care.',
+    body: 'Supporting people in need through compassion, generosity, and practical care across our communities.',
     tag: 'Year-round',
+    images: [
+      { src: '/assets/sheffield-fellowship.jpg', alt: 'Sheffield fellowship gathering' },
+      { src: '/assets/hero.jpg',                 alt: 'Sunday worship service' },
+      { src: '/assets/hero2.jpg',                alt: 'Community outreach' },
+    ],
   },
   {
     idx: '02',
@@ -47,13 +52,34 @@ export default function Ministries() {
 
         <div className="ministry-grid reveal" ref={gridRef}>
           {ministries.map(m => (
-            <article key={m.idx} className={`ministry-card${m.featured ? ' ministry-card--lg' : ''}`}>
-              <div className="ministry-card__index">{m.idx}</div>
-              <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
-              <h3>{m.title}</h3>
-              <p>{m.body}</p>
-              <span className="ministry-card__tag">{m.tag}</span>
-            </article>
+            m.featured ? (
+              <article key={m.idx} className="ministry-card ministry-card--lg">
+                {/* Left: content */}
+                <div className="ministry-card__content">
+                  <div className="ministry-card__index">{m.idx}</div>
+                  <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
+                  <h3>{m.title}</h3>
+                  <p>{m.body}</p>
+                  <span className="ministry-card__tag">{m.tag}</span>
+                </div>
+                {/* Right: photo mosaic */}
+                <div className="ministry-card__photos" aria-hidden="true">
+                  {m.images.map((img, i) => (
+                    <div key={i} className={`ministry-card__photo ministry-card__photo--${i + 1}`}>
+                      <img src={img.src} alt={img.alt} />
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ) : (
+              <article key={m.idx} className="ministry-card">
+                <div className="ministry-card__index">{m.idx}</div>
+                <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
+                <h3>{m.title}</h3>
+                <p>{m.body}</p>
+                <span className="ministry-card__tag">{m.tag}</span>
+              </article>
+            )
           ))}
         </div>
       </div>
