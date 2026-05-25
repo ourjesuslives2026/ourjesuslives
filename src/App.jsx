@@ -12,6 +12,7 @@ import Visit from './components/Visit';
 import Footer from './components/Footer';
 import BranchDetail from './pages/BranchDetail';
 import GalleryPage from './pages/GalleryPage';
+import ContactPage from './pages/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/branch/:id" element={<BranchDetail />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );

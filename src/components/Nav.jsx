@@ -59,7 +59,7 @@ export default function Nav() {
 
         <div className="nav__cta-wrap">
           <a className="btn btn--ghost-sm" href="tel:+447765450545">+44 7765 450545</a>
-          <a className="btn btn--ghost-sm" href="/#contact">Contact Us</a>
+          <a className="btn btn--ghost-sm" href="/contact">Contact Us</a>
           <button
             className="nav__menu-btn"
             onClick={() => setDrawerOpen(v => !v)}
@@ -84,7 +84,7 @@ export default function Nav() {
           {navLinks.map(l => (
             <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>{l.label}</a>
           ))}
-          <a href="/#contact" onClick={() => setDrawerOpen(false)}>Contact Us</a>
+          <a href="/contact" onClick={() => setDrawerOpen(false)}>Contact Us</a>
         </div>
       </div>
     </>
