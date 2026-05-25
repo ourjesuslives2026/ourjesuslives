@@ -537,7 +537,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 /* Dot navigation */
 .hero__dots {
   position: absolute;
-  bottom: 88px;
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
