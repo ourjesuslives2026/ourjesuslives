@@ -825,7 +825,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   font-family: var(--f-serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(120px, 24vw, 360px);
+  font-size: clamp(60px, 14vw, 210px);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-align: center;
