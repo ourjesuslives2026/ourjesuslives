@@ -636,7 +636,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   min-height: 260px;
 }
 .branch-card:hover { border-color: var(--c-ink); transform: translateY(-2px); }
-.branch-card.is-hidden { opacity: 0.18; filter: grayscale(0.5); }
+.branch-card.is-hidden { display: none; }
 .branch-card__stripe { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
 .branch-card__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
 .branch-card__flag {
