@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Visit from './components/Visit';
 import Footer from './components/Footer';
 import BranchDetail from './pages/BranchDetail';
+import GalleryPage from './pages/GalleryPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
@@ -40,6 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/branch/:id" element={<BranchDetail />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </BrowserRouter>
   );
