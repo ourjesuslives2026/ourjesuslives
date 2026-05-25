@@ -61,12 +61,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   -webkit-font-synthesis: none;
 }
 .display { font-size: clamp(40px, 5.6vw, 84px); }
-.display em { font-style: italic; font-weight: 400; color: var(--c-gold); }
+.display em { font-style: italic; font-weight: 400; color: var(--c-red); }
 .h-display { font-size: clamp(40px, 6vw, 88px); line-height: 0.98; }
-.h-display em { font-style: italic; font-weight: 400; color: var(--c-gold); }
+.h-display em { font-style: italic; font-weight: 400; color: var(--c-red); }
 .h-display--xl { font-size: clamp(56px, 9vw, 140px); }
 .h-display--light { color: var(--c-cream); }
-.h-display--light em { color: var(--c-gold); }
+.h-display--light em { color: var(--c-red); }
 
 .lead { font-size: clamp(17px, 1.5vw, 22px); line-height: 1.5; max-width: 56ch; color: var(--c-ink-2); }
 .lead--tight { max-width: 48ch; }
@@ -436,7 +436,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   margin: 0 auto;
   text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.4);
 }
-.hero__copy-full .display em { color: var(--c-gold); }
+.hero__copy-full .display em { color: var(--c-red); }
 .hero__sub-full {
   font-family: var(--f-sans);
   font-size: clamp(16px, 1.3vw, 19px);
