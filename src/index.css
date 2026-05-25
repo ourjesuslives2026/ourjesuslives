@@ -719,7 +719,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 
 .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(245,239,227,0.12); }
 .pillar { padding-right: 16px; }
-.pillar__num { font-family: var(--f-serif); font-style: italic; font-size: 22px; color: var(--c-gold); margin-bottom: 12px; font-synthesis: none; }
+.pillar__num { font-family: var(--f-serif); font-style: italic; font-size: 22px; color: rgba(245,239,227,0.6); margin-bottom: 12px; font-synthesis: none; }
 .pillar h4 { font-family: var(--f-serif); font-size: 22px; font-weight: 400; margin-bottom: 10px; letter-spacing: -0.01em; font-synthesis: none; }
 .pillar p { font-size: 14.5px; color: rgba(245,239,227,0.65); margin: 0; line-height: 1.5; }
 
