@@ -754,6 +754,10 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 .ministry-card__photo--2 { grid-row: 1; grid-column: 2; }
 .ministry-card__photo--3 { grid-row: 2; grid-column: 2; }
 
+/* THEME BANNER */
+.theme-banner { width: 100%; line-height: 0; }
+.theme-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
+
 /* QUOTE */
 .quote { padding: clamp(60px, 10vw, 130px) 0 0; background: var(--c-cream-2); text-align: center; position: relative; overflow: hidden; }
 .quote__blob { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; z-index: 0; }
