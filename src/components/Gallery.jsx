@@ -16,8 +16,6 @@ const cells = [
 const filters = [
   { key: 'all', label: 'All' },
   { key: 'worship', label: 'Worship' },
-  { key: 'kids', label: 'Children' },
-  { key: 'family', label: 'Church Family' },
   { key: 'outreach', label: 'Outreach' },
   { key: 'branches', label: 'Branches' },
 ];
