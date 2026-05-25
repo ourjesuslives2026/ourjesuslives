@@ -825,10 +825,10 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   font-family: var(--f-serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(60px, 14vw, 210px);
+  font-size: 22vw;
   line-height: 0.85;
   letter-spacing: -0.04em;
-  text-align: center;
+  text-align: left;
   margin: 32px calc(-1 * var(--pad)) -24px;
   color: transparent;
   background: linear-gradient(180deg, var(--c-ink) 0%, transparent 95%);
