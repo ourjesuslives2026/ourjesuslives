@@ -74,6 +74,8 @@ export default function ContactPage() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: 'f5141fb1-45c8-4623-b7b4-b5c31ab8a93f',
+          to: 'springodesignstudio@gmail.com',
+          replyto: form.email,
           name: form.name,
           email: form.email,
           phone: form.phone,
