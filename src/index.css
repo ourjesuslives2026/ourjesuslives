@@ -563,7 +563,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 
 /* MARQUEE */
 .marquee {
-  background: var(--c-ink);
+  background: var(--c-green);
   color: var(--c-cream);
   overflow: hidden;
   padding: 22px 0;
@@ -587,7 +587,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
   letter-spacing: -0.02em;
   font-synthesis: none;
 }
-.marquee__track .dot { color: var(--c-gold); font-size: 22px; font-style: normal; align-self: center; }
+.marquee__track .dot { color: rgba(255,255,255,0.5); font-size: 22px; font-style: normal; align-self: center; }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
