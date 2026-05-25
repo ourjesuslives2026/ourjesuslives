@@ -39,7 +39,7 @@ const ministries = [
   {
     idx: '06',
     icon: <svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><path d="M20 38h8M18 42h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M20 18l8 4-8 4z" fill="currentColor"/></svg>,
-    title: 'Media Ministry',
+    title: 'Social Media Ministry',
     body: 'Sharing the message of Jesus through digital platforms, teaching resources and online content.',
     tag: 'Online · Worldwide',
   },

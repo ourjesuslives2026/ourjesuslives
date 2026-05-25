@@ -12,8 +12,8 @@ const slides = [
 ];
 
 const marqueeItems = [
-  'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Media Ministry',
-  'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Media Ministry',
+  'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Social Media Ministry',
+  'Worship', 'Prayer', 'Teaching', 'Fellowship', 'Community Outreach', "Children & Youth", 'Social Media Ministry',
 ];
 
 export default function Hero() {
