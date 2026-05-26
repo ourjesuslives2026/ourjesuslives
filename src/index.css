@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Geist+Mono:wght@400;500&display=swap');
 
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/assets/PPFormula-CondensedBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --c-ink:    #101828;
   --c-ink-2:  #1c2638;
@@ -455,12 +463,13 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   display: inline;
 }
 .hero__inherit-word b {
-  font-family: var(--f-sans);
-  font-weight: 800;
+  font-family: 'PPFormula', var(--f-sans);
+  font-weight: 900;
   font-style: normal;
   color: var(--c-cream);
   display: inline;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 .hero__heading-top {
   display: block;
