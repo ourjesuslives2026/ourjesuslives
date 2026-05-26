@@ -61,12 +61,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   -webkit-font-synthesis: none;
 }
 .display { font-size: clamp(40px, 5.6vw, 84px); }
-.display em { font-style: italic; font-weight: 400; color: var(--c-red); }
+.display em { font-style: italic; font-weight: 400; color: var(--c-green); }
 .h-display { font-size: clamp(40px, 6vw, 88px); line-height: 0.98; }
-.h-display em { font-style: italic; font-weight: 400; color: var(--c-red); }
+.h-display em { font-style: italic; font-weight: 400; color: var(--c-green); }
 .h-display--xl { font-size: clamp(56px, 9vw, 140px); }
 .h-display--light { color: var(--c-cream); }
-.h-display--light em { color: var(--c-red); }
+.h-display--light em { color: var(--c-green); }
 
 .lead { font-size: clamp(17px, 1.5vw, 22px); line-height: 1.5; max-width: 56ch; color: var(--c-ink-2); }
 .lead--tight { max-width: 48ch; }
