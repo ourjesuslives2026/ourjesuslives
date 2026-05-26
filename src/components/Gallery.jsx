@@ -74,7 +74,7 @@ export default function Gallery() {
       <div className="container">
         <div className="gallery__head reveal" ref={headRef}>
           <div>
-            <h2 className="h-display">Life at our ministry.</h2>
+            <h2 className="h-display">Life at <em>our ministry.</em></h2>
           </div>
           <div className="gallery__filter">
             {filters.map(f => (

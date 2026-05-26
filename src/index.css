@@ -441,7 +441,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   margin: 0 auto;
   text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.4);
 }
-.hero__copy-full .display em { color: var(--c-red); }
+.hero__copy-full .display em { color: var(--c-cream); }
 .hero__sub-full {
   font-family: var(--f-sans);
   font-size: clamp(16px, 1.3vw, 19px);
@@ -568,12 +568,12 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 
 /* MARQUEE */
 .marquee {
-  background: var(--c-green);
-  color: var(--c-cream);
+  background: #fff;
+  color: var(--c-green);
   overflow: hidden;
   padding: 22px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(100,189,76,0.2);
+  border-bottom: 1px solid rgba(100,189,76,0.2);
   position: relative; z-index: 3;
 }
 .marquee__track {
@@ -592,7 +592,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   letter-spacing: -0.02em;
   font-synthesis: none;
 }
-.marquee__track .dot { color: rgba(255,255,255,0.5); font-size: 22px; font-style: normal; align-self: center; }
+.marquee__track .dot { color: rgba(100,189,76,0.4); font-size: 22px; font-style: normal; align-self: center; }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -729,6 +729,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .pillar p { font-size: 14.5px; color: rgba(245,239,227,0.65); margin: 0; line-height: 1.5; }
 
 /* MINISTRIES */
+.ministries .h-display em { color: var(--c-green); }
 .ministries { padding: clamp(80px, 10vw, 140px) 0; }
 .ministries__head { max-width: 920px; margin-bottom: 56px; }
 .ministries__head .h-display { margin-bottom: 24px; }
