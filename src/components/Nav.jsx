@@ -1,13 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-const MapPin = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14">
-    <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-      d="M12 22s-7-7.58-7-13a7 7 0 0 1 14 0c0 5.42-7 13-7 13z"/>
-    <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" strokeWidth="2"/>
-  </svg>
-);
-
 export default function Nav() {
   const [scrollPct, setScrollPct] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -36,30 +28,36 @@ export default function Nav() {
   }, [drawerOpen]);
 
   const navLinks = [
-    { href: '/#story', label: 'Our Story' },
-    { href: '/#branches', label: 'Branches' },
+    { href: '/#story',      label: 'Our Story' },
+    { href: '/#branches',   label: 'Branches' },
     { href: '/#ministries', label: 'Ministries' },
-    { href: '/#gallery', label: 'Gallery' },
+    { href: '/#gallery',    label: 'Gallery' },
+    { href: '/contact',     label: 'Contact Us' },
   ];
 
   return (
     <>
       <header className="nav" id="main-nav" style={{ position: 'sticky' }}>
+
+        {/* Brand / logo */}
         <a className="nav__brand" href="#top" aria-label="Our Jesus Lives Ministry, home">
           <span className="nav__logo">
             <img src="/assets/logo.svg" alt="Our Jesus Lives Ministry logo" />
           </span>
         </a>
 
+        {/* Centre links */}
         <nav className="nav__links" aria-label="Primary">
           {navLinks.map(l => (
             <a key={l.href} href={l.href}>{l.label}</a>
           ))}
         </nav>
 
+        {/* Right side — secondary logo + hamburger */}
         <div className="nav__cta-wrap">
-          <a className="btn btn--ghost-sm" href="tel:+447765450545">+44 7765 450545</a>
-          <a className="btn btn--ghost-sm" href="/contact">Contact Us</a>
+          <span className="nav__secondary-logo">
+            <img src="/assets/logo.svg" alt="" aria-hidden="true" />
+          </span>
           <button
             className="nav__menu-btn"
             onClick={() => setDrawerOpen(v => !v)}
@@ -84,7 +82,6 @@ export default function Nav() {
           {navLinks.map(l => (
             <a key={l.href} href={l.href} onClick={() => setDrawerOpen(false)}>{l.label}</a>
           ))}
-          <a href="/contact" onClick={() => setDrawerOpen(false)}>Contact Us</a>
         </div>
       </div>
     </>
