@@ -437,11 +437,31 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   font-size: clamp(48px, 7.2vw, 112px);
   line-height: 0.96;
   text-align: center;
-  max-width: 14ch;
+  max-width: none;
   margin: 0 auto;
   text-shadow: 0 2px 24px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.4);
 }
-.hero__copy-full .display em { color: var(--c-cream); display: block; }
+.hero__inherit-word {
+  display: block;
+  font-size: clamp(80px, 13vw, 200px);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+}
+.hero__inherit-word em {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--c-cream);
+  display: inline;
+}
+.hero__inherit-word b {
+  font-family: var(--f-sans);
+  font-weight: 800;
+  font-style: normal;
+  color: var(--c-cream);
+  display: inline;
+  letter-spacing: -0.02em;
+}
 .hero__heading-top {
   display: block;
   font-family: var(--f-mono);
