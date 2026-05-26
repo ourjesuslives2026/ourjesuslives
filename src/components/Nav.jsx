@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
   const [scrollPct, setScrollPct] = useState(0);
@@ -40,11 +41,11 @@ export default function Nav() {
       <header className="nav" id="main-nav" style={{ position: 'sticky' }}>
 
         {/* Brand / logo */}
-        <a className="nav__brand" href="#top" aria-label="Our Jesus Lives Ministry, home">
+        <Link className="nav__brand" to="/" aria-label="Our Jesus Lives Ministry, home">
           <span className="nav__logo">
             <img src="/assets/logo.svg" alt="Our Jesus Lives Ministry logo" />
           </span>
-        </a>
+        </Link>
 
         {/* Centre links */}
         <nav className="nav__links" aria-label="Primary">
