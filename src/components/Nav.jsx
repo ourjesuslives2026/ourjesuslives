@@ -56,7 +56,7 @@ export default function Nav() {
         {/* Right side — secondary logo + hamburger */}
         <div className="nav__cta-wrap">
           <span className="nav__secondary-logo">
-            <img src="/assets/logo.svg" alt="" aria-hidden="true" />
+            <img src="/assets/the-overcomes.svg" alt="The Overcomes" />
           </span>
           <button
             className="nav__menu-btn"
