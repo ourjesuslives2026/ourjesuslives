@@ -74,7 +74,8 @@ export default function Hero() {
 
         <div className="hero__copy-full">
           <h1 className="display">
-            A church family where <em>Jesus</em> is lifted high.
+            <span className="hero__heading-top">Possessing Our</span>
+            <em>Inheritance.</em>
           </h1>
           <p className="hero__sub-full">
             Worship, prayer, teaching and fellowship across our UK branches.
