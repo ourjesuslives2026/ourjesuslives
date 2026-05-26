@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Geist+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Geist+Mono:wght@400;500&display=swap');
 
 @font-face {
   font-family: 'PPFormula';
@@ -463,12 +463,12 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   display: inline;
 }
 .hero__inherit-word b {
-  font-family: 'PPFormula', var(--f-sans);
-  font-weight: 900;
+  font-family: 'Bebas Neue', var(--f-sans);
+  font-weight: 400;
   font-style: normal;
   color: var(--c-cream);
   display: inline;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 .hero__heading-top {
