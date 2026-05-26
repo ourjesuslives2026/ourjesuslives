@@ -63,15 +63,6 @@ export default function Hero() {
       </div>
 
       <div className="hero__grid-full">
-        <div className="hero__topline">
-          <div className="hero__chips-inline" aria-label="Service languages">
-            <span>Malayalam</span><span className="sep">/</span>
-            <span>Tamil</span><span className="sep">/</span>
-            <span>Hindi</span><span className="sep">/</span>
-            <span>English</span>
-          </div>
-        </div>
-
         <div className="hero__copy-full">
           <h1 className="display">
             <span className="hero__heading-top">Possessing Our</span>
@@ -97,6 +88,12 @@ export default function Hero() {
             <div>
               <div className="hero__stat-k">Branches</div>
               <div className="hero__stat-v">across the UK</div>
+            </div>
+            <div className="hero__chips-inline" aria-label="Service languages">
+              <span>Malayalam</span><span className="sep">/</span>
+              <span>Tamil</span><span className="sep">/</span>
+              <span>Hindi</span><span className="sep">/</span>
+              <span>English</span>
             </div>
           </div>
         </div>
