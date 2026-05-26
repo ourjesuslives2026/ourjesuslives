@@ -469,6 +469,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   font-weight: 500;
   color: rgba(255,255,255,0.7);
   margin-bottom: 12px;
+  padding-bottom: 10px;
   font-style: normal;
 }
 .hero__sub-full {
