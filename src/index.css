@@ -477,7 +477,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   font-size: clamp(16px, 1.3vw, 19px);
   line-height: 1.5;
   max-width: 48ch;
-  margin: 28px auto 0;
+  margin: 14px auto 0;
   color: rgba(255,255,255,0.92);
   text-align: center;
   text-shadow: 0 1px 12px rgba(0,0,0,0.55);
