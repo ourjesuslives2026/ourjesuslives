@@ -490,13 +490,15 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .hero__cta-full .btn--ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--c-cream); }
 
 .hero__stat {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px;
   padding-top: 18px;
   border-top: 1px solid rgba(255,255,255,0.22);
+  text-align: center;
 }
 .hero__stat .hero__chips-inline {
   flex-basis: 100%;
   margin-top: 12px;
+  justify-content: center;
 }
 .hero__stat-num {
   font-family: var(--f-serif);
