@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Geist+Mono:wght@400;500&display=swap');
 
-@font-face {
-  font-family: 'PPFormula';
-  src: url('/assets/PPFormula-CondensedBlack.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --c-ink:    #101828;
   --c-ink-2:  #1c2638;
