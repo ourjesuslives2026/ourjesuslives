@@ -24,11 +24,6 @@ function HomePage() {
         <Hero />
         <Welcome />
         <Branches />
-        <section className="theme-banner">
-          <div className="container">
-            <img src="/assets/inheritance.jpg" alt="2026 — Possessing Our Inheritance · Obadiah 1:17" />
-          </div>
-        </section>
         <Story />
         <Ministries />
         <Quote />
