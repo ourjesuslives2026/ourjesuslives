@@ -2,8 +2,7 @@ export default function TopBar() {
   return (
     <div className="topbar">
       <div className="topbar__inner">
-        <span className="topbar__dot" />
-        <span>Sunday Worship · Sheffield · 10:30am</span>
+        <span>OUR JESUS LIVES MINISTRIES</span>
       </div>
     </div>
   );
