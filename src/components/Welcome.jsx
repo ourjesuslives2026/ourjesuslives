@@ -42,7 +42,7 @@ export default function Welcome() {
                 loading="lazy"
               />
             </div>
-            <p className="welcome__video-label">A word from our pastor</p>
+            <p className="welcome__video-label">Get to know our church</p>
           </div>
         </div>
       </div>
