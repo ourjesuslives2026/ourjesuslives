@@ -5,14 +5,6 @@ const slides = [
     src: '/assets/inheritance.jpg',
     alt: '2026 — Possessing Our Inheritance',
   },
-  {
-    src: '/assets/hero.jpg',
-    alt: 'Worship gathering — congregation in a sunlit church hall',
-  },
-  {
-    src: '/assets/hero2.jpg',
-    alt: 'Congregation with hands raised in worship before a glowing cross',
-  },
 ];
 
 const marqueeItems = [
@@ -98,17 +90,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide dots */}
-      <div className="hero__dots" aria-label="Slideshow navigation">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            className={`hero__dot${i === current ? ' hero__dot--active' : ''}`}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
-      </div>
+      {/* Slide dots — only show when more than one slide */}
+      {slides.length > 1 && (
+        <div className="hero__dots" aria-label="Slideshow navigation">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              className={`hero__dot${i === current ? ' hero__dot--active' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
 
 
       <div className="marquee" aria-hidden="true">
