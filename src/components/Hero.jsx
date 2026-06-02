@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 
 const slides = [
   {
+    src: '/assets/inheritance.jpg',
+    alt: '2026 — Possessing Our Inheritance',
+  },
+  {
     src: '/assets/hero.jpg',
     alt: 'Worship gathering — congregation in a sunlit church hall',
   },
