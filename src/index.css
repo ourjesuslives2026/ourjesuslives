@@ -1150,6 +1150,15 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   border-left: 3px solid var(--c-gold);
   padding-left: 28px;
 }
+.bd__welcome-hindi {
+  margin-top: 28px;
+  font-family: var(--f-sans);
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.8;
+  color: var(--c-ink-2);
+  border-left: 3px solid var(--c-yellow);
+  padding-left: 28px;
+}
 
 /* Pastor */
 .bd__pastor-card {

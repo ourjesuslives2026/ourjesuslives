@@ -67,6 +67,9 @@ export default function BranchDetail() {
           <blockquote className="bd__welcome-text">
             "{branch.welcome}"
           </blockquote>
+          {branch.welcomeHindi && (
+            <p className="bd__welcome-hindi">{branch.welcomeHindi}</p>
+          )}
         </section>
 
         {/* Pastor */}

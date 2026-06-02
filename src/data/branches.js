@@ -47,6 +47,7 @@ export const branches = [
     city: 'Sheffield',
     desc: 'Hindi worship and fellowship in Sheffield for the Hindi-speaking community.',
     welcome: 'Welcome to Sheffield Hindi Church. We are a Hindi-speaking fellowship in Sheffield, gathering each week for worship, prayer, and the Word of God. Come and be part of our family.',
+    welcomeHindi: 'Praise the Lord! हमारे प्रभु और उद्धारकर्ता यीशु मसीह के धन्य नाम में आप सभी का हार्दिक स्वागत है। हम आपको Our Jesus Lives Ministries की हिंदी सभा में प्रेमपूर्वक आमंत्रित करते हैं। यदि आपकी इच्छा है कि आप पवित्र आत्मा से परिपूर्ण हिंदी/उर्दू कलीसिया की आराधना और संगति में सम्मिलित हों, तो क्यों न हमारे साथ जुड़ें। हमारी सभा प्रत्येक रविवार दोपहर 12:30 बजे आरंभ होती है। आइए, स्वयं परमेश्वर की उपस्थिति का अनुभव करें और अपने साथ किसी और को भी लेकर आएँ। आइए, हम मिलकर UK में परमेश्वर के राज्य का निर्माण करें।',
     pastor: 'Pastor & Team',
     pastoralRole: 'Leadership',
     pastoralPhoto: '/assets/pastors.jpg',
