@@ -41,9 +41,9 @@ export default function Nav() {
       <header className="nav" id="main-nav" style={{ position: 'sticky' }}>
 
         {/* Brand / logo */}
-        <Link className="nav__brand" to="/" aria-label="Our Jesus Lives Ministry, home">
+        <Link className="nav__brand" to="/" aria-label="Our Jesus Lives Ministries, home">
           <span className="nav__logo">
-            <img src="/assets/logo.svg" alt="Our Jesus Lives Ministry logo" />
+            <img src="/assets/logo.svg" alt="Our Jesus Lives Ministries logo" />
           </span>
         </Link>
 

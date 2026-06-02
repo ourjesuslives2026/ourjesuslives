@@ -236,7 +236,7 @@ export default function ContactPage() {
       <section className="cp__map-strip">
         <iframe
           src="https://maps.google.com/maps?q=A6135,+Sheffield+S5+7AF&output=embed&z=14"
-          title="Our Jesus Lives Ministry — Sheffield"
+          title="Our Jesus Lives Ministries — Sheffield"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen

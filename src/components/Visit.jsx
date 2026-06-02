@@ -3,7 +3,7 @@ import { useReveal } from '../hooks/useReveal';
 const cards = [
   { no: '01', title: 'When We Meet', body: 'Sunday services and weekly gatherings across our UK branches. Sheffield meets at 10:30am.' },
   { no: '02', title: 'What to Expect', body: 'Worship, prayer, Bible-based teaching, and friendly fellowship. Tea afterwards — always.' },
-  { no: '03', title: 'Languages', body: 'Malayalam, Tamil, Hindi, and English services available across our ministry.' },
+  { no: '03', title: 'Languages', body: 'Malayalam, Tamil, Hindi, and English services available across our ministries.' },
   { no: '04', title: 'Need Help?', body: "Contact us and we will guide you to the nearest branch — and meet you at the door if you'd like." },
 ];
 

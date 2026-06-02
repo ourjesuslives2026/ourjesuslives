@@ -28,14 +28,14 @@ export default function Story() {
             </h2>
 
             <p>
-              Our Jesus Lives Ministry was founded with a clear mission: to share
+              Our Jesus Lives Ministries was founded with a clear mission: to share
               the message of Jesus Christ and build strong, faith-filled communities.
               What began as a vision to serve people through worship, teaching, media,
-              and outreach has grown into a ministry serving different communities
+              and outreach has grown into a ministries serving different communities
               across the UK.
             </p>
             <p>
-              Led by <strong>Rev. Renjit and Anu Ambanattu</strong>, the ministry continues
+              Led by <strong>Rev. Renjit and Anu Ambanattu</strong>, the ministries continue
               to encourage believers, support families, and reach people with the hope
               of the Gospel.
             </p>

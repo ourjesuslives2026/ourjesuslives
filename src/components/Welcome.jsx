@@ -14,7 +14,7 @@ export default function Welcome() {
           </div>
           <div className="welcome__right">
             <p className="lead">
-              At Our Jesus Lives Ministry, we believe Jesus is the answer to the deepest
+              At Our Jesus Lives Ministries, we believe Jesus is the answer to the deepest
               needs of this world. Our heart is to represent Christ with sincerity, compassion,
               and clarity — helping individuals and families experience God's love through
               worship, teaching, prayer, and fellowship.

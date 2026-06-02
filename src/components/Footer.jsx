@@ -35,7 +35,7 @@ export default function Footer() {
                 <img src="/assets/logo.svg" alt="" aria-hidden="true" />
               </span>
               <div>
-                <div className="footer__brand-top">Our Jesus Lives Ministry</div>
+                <div className="footer__brand-top">Our Jesus Lives Ministries</div>
                 <div className="footer__brand-bot">Sheffield · United Kingdom</div>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <div>© 2026 Our Jesus Lives Ministry. All rights reserved.</div>
+          <div>© 2026 Our Jesus Lives Ministries. All rights reserved.</div>
           <div className="footer__verse">"Jesus Christ is the same yesterday and today and forever." — Hebrews 13:8</div>
         </div>
 

@@ -8,7 +8,7 @@ export const branches = [
     shortName: 'Sheffield Christian Fellowship',
     city: 'Sheffield',
     desc: 'The main Sheffield branch — worship, teaching, prayer and fellowship for the whole family. Where this ministry began, and where it returns home each Sunday.',
-    welcome: 'We warmly welcome you to Sheffield Christian Fellowship, the heart of Our Jesus Lives Ministry. Whether you are joining us for the first time or returning home, you will find a place of worship, love, and community here. Come as you are — there is a seat saved for you.',
+    welcome: 'We warmly welcome you to Sheffield Christian Fellowship, the heart of Our Jesus Lives Ministries. Whether you are joining us for the first time or returning home, you will find a place of worship, love, and community here. Come as you are — there is a seat saved for you.',
     pastor: 'Rev. Renjit & Anu Ambanattu',
     pastoralRole: 'Senior Pastors',
     pastoralPhoto: '/assets/pastors.jpg',
