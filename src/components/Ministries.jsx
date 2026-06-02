@@ -17,8 +17,9 @@ const ministries = [
     idx: '02',
     icon: <svg viewBox="0 0 48 48"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/><path d="M18 36v-8h12v8" stroke="currentColor" strokeWidth="2" fill="none"/></svg>,
     title: 'Youth Ministry',
-    body: 'Encouraging young people to build strong faith, purpose, and character.',
-    tag: 'Ages 12–24',
+    body: 'We are a church praying for Revival to happen again in this land. We know it\'s our young generation who will lead the church tomorrow. At OJLM, we have our dedicated youth ministry team to encourage, support and build our youngsters to take over the baton and win souls to Jesus. Why not join us? Last Saturday of every month, we gather together with worship, word, activities, discussions and lot more!',
+    verse: { text: 'And it shall come to pass afterward That I will pour out My Spirit on all flesh; Your sons and your daughters shall prophesy, Your old men shall dream dreams, Your young men shall see visions.', ref: 'Joel 2:28' },
+    tag: 'Last Saturday of every month',
   },
   {
     idx: '03',
@@ -77,6 +78,12 @@ export default function Ministries() {
                 <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
                 <h3>{m.title}</h3>
                 <p>{m.body}</p>
+                {m.verse && (
+                  <blockquote className="ministry-card__verse">
+                    <p>"{m.verse.text}"</p>
+                    <cite>— {m.verse.ref}</cite>
+                  </blockquote>
+                )}
                 <span className="ministry-card__tag">{m.tag}</span>
               </article>
             )
