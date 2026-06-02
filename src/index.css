@@ -810,6 +810,24 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .ministry-card--lg h3 { font-size: clamp(28px, 3vw, 44px); margin-bottom: 16px; }
 .ministry-card--lg p { font-size: 17px; line-height: 1.6; flex: 1; }
 
+/* Full-width content card (e.g. Youth Ministry) */
+.ministry-card--fw {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  padding: 48px;
+}
+.ministry-card--fw .ministry-card__index { position: absolute; top: 24px; right: 28px; }
+.ministry-card--fw .ministry-card__fw-left { position: relative; display: flex; flex-direction: column; }
+.ministry-card--fw .ministry-card__icon { background: var(--c-ink); color: var(--c-gold); flex-shrink: 0; width: 72px; height: 72px; margin-bottom: 28px; }
+.ministry-card--fw h3 { font-size: clamp(28px, 3vw, 44px); margin-bottom: 16px; }
+.ministry-card--fw p { font-size: 17px; line-height: 1.7; }
+.ministry-card--fw .ministry-card__fw-right { display: flex; flex-direction: column; justify-content: center; gap: 24px; padding-top: 8px; }
+.ministry-card--fw .ministry-card__verse { margin: 0; }
+.ministry-card--fw .ministry-card__tag { margin-top: auto; }
+
 /* Photo mosaic — right half */
 .ministry-card__photos { flex: 1 1 50%; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; min-height: 360px; }
 .ministry-card__photo { overflow: hidden; }
@@ -1072,6 +1090,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .branch-card--feature .branch-card__photo { min-height: 240px; }
   .ministry-grid { grid-template-columns: 1fr; }
   .ministry-card--lg { flex-direction: column; }
+  .ministry-card--fw { grid-template-columns: 1fr; gap: 28px; padding: 36px 28px; }
   .ministry-card--lg .ministry-card__content { padding: 36px 28px 32px; }
   .ministry-card__photos { min-height: 280px; grid-template-columns: 1fr 1fr; }
   .visit__grid { grid-template-columns: 1fr; }

@@ -14,7 +14,7 @@ const ministries = [
     ],
   },
   {
-    idx: '02',
+    idx: '02', fullWidth: true,
     icon: <svg viewBox="0 0 48 48"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/><path d="M18 36v-8h12v8" stroke="currentColor" strokeWidth="2" fill="none"/></svg>,
     title: 'Youth Ministry',
     body: 'We are a church praying for Revival to happen again in this land. We know it\'s our young generation who will lead the church tomorrow. At OJLM, we have our dedicated youth ministry team to encourage, support and build our youngsters to take over the baton and win souls to Jesus. Why not join us? Last Saturday of every month, we gather together with worship, word, activities, discussions and lot more!',
@@ -52,10 +52,9 @@ export default function Ministries() {
         </div>
 
         <div className="ministry-grid reveal" ref={gridRef}>
-          {ministries.map(m => (
-            m.featured ? (
+          {ministries.map(m => {
+            if (m.featured) return (
               <article key={m.idx} className="ministry-card ministry-card--lg">
-                {/* Left: content */}
                 <div className="ministry-card__content">
                   <div className="ministry-card__index">{m.idx}</div>
                   <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
@@ -63,7 +62,6 @@ export default function Ministries() {
                   <p>{m.body}</p>
                   <span className="ministry-card__tag">{m.tag}</span>
                 </div>
-                {/* Right: photo mosaic */}
                 <div className="ministry-card__photos" aria-hidden="true">
                   {m.images.map((img, i) => (
                     <div key={i} className={`ministry-card__photo ministry-card__photo--${i + 1}`}>
@@ -72,22 +70,36 @@ export default function Ministries() {
                   ))}
                 </div>
               </article>
-            ) : (
+            );
+            if (m.fullWidth) return (
+              <article key={m.idx} className="ministry-card ministry-card--fw">
+                <div className="ministry-card__fw-left">
+                  <div className="ministry-card__index">{m.idx}</div>
+                  <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
+                  <h3>{m.title}</h3>
+                  <p>{m.body}</p>
+                </div>
+                <div className="ministry-card__fw-right">
+                  {m.verse && (
+                    <blockquote className="ministry-card__verse">
+                      <p>"{m.verse.text}"</p>
+                      <cite>— {m.verse.ref}</cite>
+                    </blockquote>
+                  )}
+                  <span className="ministry-card__tag">{m.tag}</span>
+                </div>
+              </article>
+            );
+            return (
               <article key={m.idx} className="ministry-card">
                 <div className="ministry-card__index">{m.idx}</div>
                 <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
                 <h3>{m.title}</h3>
                 <p>{m.body}</p>
-                {m.verse && (
-                  <blockquote className="ministry-card__verse">
-                    <p>"{m.verse.text}"</p>
-                    <cite>— {m.verse.ref}</cite>
-                  </blockquote>
-                )}
                 <span className="ministry-card__tag">{m.tag}</span>
               </article>
-            )
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
