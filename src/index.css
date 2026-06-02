@@ -1150,6 +1150,34 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   border-left: 3px solid var(--c-gold);
   padding-left: 28px;
 }
+.bd__about { margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
+.bd__about-para { font-size: clamp(15px, 1.4vw, 17px); line-height: 1.75; color: var(--c-ink-2); }
+.bd__verse {
+  margin-top: 36px;
+  padding: 28px 32px;
+  background: var(--c-paper);
+  border-left: 3px solid var(--c-green);
+  border-radius: 0 4px 4px 0;
+}
+.bd__verse-text {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--c-ink);
+  margin-bottom: 12px;
+  font-synthesis: none;
+}
+.bd__verse-ref {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  font-style: normal;
+  display: block;
+}
 .bd__welcome-hindi {
   margin-top: 28px;
   font-family: var(--f-sans);

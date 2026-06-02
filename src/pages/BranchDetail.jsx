@@ -67,6 +67,19 @@ export default function BranchDetail() {
           <blockquote className="bd__welcome-text">
             "{branch.welcome}"
           </blockquote>
+          {branch.about && (
+            <div className="bd__about">
+              {branch.about.map((para, i) => (
+                <p key={i} className="bd__about-para">{para}</p>
+              ))}
+            </div>
+          )}
+          {branch.verse && (
+            <blockquote className="bd__verse">
+              <p className="bd__verse-text">"{branch.verse.text}"</p>
+              <cite className="bd__verse-ref">— {branch.verse.ref}</cite>
+            </blockquote>
+          )}
           {branch.welcomeHindi && (
             <p className="bd__welcome-hindi">{branch.welcomeHindi}</p>
           )}
