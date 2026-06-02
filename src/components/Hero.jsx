@@ -83,12 +83,7 @@ export default function Hero() {
             <a className="btn btn--ghost btn--lg" href="#branches">Find a Branch</a>
           </div>
 
-          <div className="hero__stat">
-            <div className="hero__stat-num">9</div>
-            <div>
-              <div className="hero__stat-k">Branches</div>
-              <div className="hero__stat-v">across the UK</div>
-            </div>
+          <div className="hero__langs">
             <div className="hero__chips-inline" aria-label="Service languages">
               <span>Malayalam</span><span className="sep">/</span>
               <span>Tamil</span><span className="sep">/</span>
