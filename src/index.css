@@ -786,84 +786,182 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .branches__map-text strong { font-style: normal; font-weight: 600; }
 
 /* STORY */
-.story { background: var(--c-blue); color: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; }
-.story__grid { display: grid; grid-template-columns: 0.85fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
+.story { background: var(--c-blue); color: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0 0; overflow: hidden; }
+
+/* Top: photo + intro */
+.story__top { display: grid; grid-template-columns: 0.7fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
 .story__photo--real { position: relative; aspect-ratio: 4/3; background: rgba(245,239,227,0.04); border: 1px solid rgba(245,239,227,0.12); border-radius: 4px; overflow: hidden; }
 .story__photo--real img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; filter: saturate(0.92); }
 .story__photo--real::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 65%, rgba(16,24,40,0.4) 100%); pointer-events: none; }
-.story__caption { font-family: var(--f-serif); font-style: italic; font-size: 15px; color: rgba(245,239,227,0.55); margin-top: 16px; font-synthesis: none; }
-.story__copy p { font-size: 17px; line-height: 1.65; color: rgba(245,239,227,0.75); margin: 18px 0; max-width: 56ch; }
-.story__copy p strong { color: var(--c-cream); font-weight: 500; }
+.story__caption { font-family: var(--f-serif); font-style: italic; font-size: 14px; color: rgba(245,239,227,0.45); margin-top: 14px; font-synthesis: none; }
+.story__intro p { font-size: 17px; line-height: 1.65; color: rgba(245,239,227,0.72); margin: 20px 0 0; max-width: 54ch; }
+.story__intro p strong { color: var(--c-cream); font-weight: 500; }
 
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(245,239,227,0.12); }
-.pillar { padding-right: 16px; }
-.pillar__num { font-family: var(--f-serif); font-style: italic; font-size: 22px; color: rgba(245,239,227,0.6); margin-bottom: 12px; font-synthesis: none; }
-.pillar h4 { font-family: var(--f-serif); font-size: 22px; font-weight: 400; margin-bottom: 10px; letter-spacing: -0.01em; font-synthesis: none; }
-.pillar p { font-size: 14.5px; color: rgba(245,239,227,0.65); margin: 0; line-height: 1.5; }
-
-/* KINGDOM Values & Principles */
-.kingdom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 6vw, 80px);
-  margin-top: clamp(56px, 6vw, 80px);
-  padding-top: 48px;
+/* Vision & Mission panels */
+.story__vm {
+  margin-top: clamp(56px, 7vw, 90px);
   border-top: 1px solid rgba(245,239,227,0.12);
-  align-items: start;
 }
-.kingdom__label {
+.story__vm-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  padding: clamp(36px, 5vw, 56px) 0;
+}
+.story__vm-divider { height: 1px; background: rgba(245,239,227,0.1); }
+.story__vm-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+.story__vm-num {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(245,239,227,0.3);
+}
+.story__vm-label {
+  font-family: var(--f-serif);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--c-green);
+  font-synthesis: none;
+  line-height: 1.2;
+}
+.story__vm-pull {
+  font-family: var(--f-serif);
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--c-cream);
+  margin: 0 0 18px;
+  font-synthesis: none;
+  letter-spacing: -0.01em;
+}
+.story__vm-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(245,239,227,0.6);
+  margin: 0;
+  max-width: 62ch;
+}
+.story__vm-body em { font-style: italic; color: rgba(245,239,227,0.85); }
+
+/* Motto bar */
+.story__vm-motto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 0 clamp(56px, 7vw, 90px);
+  flex-wrap: wrap;
+}
+.story__vm-motto-label {
   font-family: var(--f-mono);
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--c-green);
-  margin: 0 0 24px;
+  color: rgba(245,239,227,0.35);
 }
-/* Acrostic */
-.kingdom__acrostic { display: flex; flex-direction: column; gap: 10px; }
-.kingdom__row { display: flex; align-items: baseline; gap: 0; }
-.kingdom__letter {
+.story__vm-motto-text {
   font-family: var(--f-serif);
-  font-size: clamp(28px, 3vw, 38px);
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 26px);
+  color: var(--c-cream);
+  font-synthesis: none;
+}
+.story__vm-motto-ref {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  margin-left: auto;
+}
+
+/* KINGDOM strip — full bleed dark band */
+.story__kingdom {
+  background: rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(245,239,227,0.08);
+  padding: clamp(52px, 7vw, 80px) 0 clamp(64px, 8vw, 100px);
+}
+.story__kingdom-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  margin: 0 0 32px;
+}
+
+/* Values horizontal strip */
+.story__kingdom-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background: rgba(245,239,227,0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.story__kv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 12px 24px;
+  text-align: center;
+  background: rgba(245,239,227,0.03);
+  transition: background 0.25s;
+  gap: 8px;
+}
+.story__kv:hover { background: rgba(245,239,227,0.08); }
+.story__kv-letter {
+  font-family: var(--f-serif);
+  font-size: clamp(36px, 4vw, 56px);
   font-weight: 400;
   color: var(--c-green);
   line-height: 1;
-  width: 36px;
-  flex-shrink: 0;
   font-synthesis: none;
 }
-.kingdom__word {
-  font-size: 15px;
-  color: rgba(245,239,227,0.75);
-  letter-spacing: 0.01em;
-  padding-bottom: 2px;
-  border-bottom: 1px dashed rgba(245,239,227,0.12);
-  flex: 1;
-  padding-left: 2px;
-  line-height: 2;
+.story__kv-word {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,239,227,0.5);
+  line-height: 1.3;
 }
-/* Principles list */
-.kingdom__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-.kingdom__item {
+
+/* Principles grid */
+.story__principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(245,239,227,0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.story__principle {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
-  border-bottom: 1px dashed rgba(245,239,227,0.1);
+  gap: 6px;
+  padding: 20px 20px 22px;
+  background: rgba(245,239,227,0.03);
+  transition: background 0.25s;
 }
-.kingdom__item:last-child { border-bottom: none; }
-.kingdom__item-word {
+.story__principle:hover { background: rgba(245,239,227,0.07); }
+.story__principle-word {
   font-family: var(--f-mono);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--c-cream);
-  margin-bottom: 3px;
 }
-.kingdom__item-desc {
+.story__principle-desc {
   font-size: 13px;
-  color: rgba(245,239,227,0.55);
-  line-height: 1.4;
+  color: rgba(245,239,227,0.5);
+  line-height: 1.45;
 }
+.story__principle-desc em { font-style: normal; color: var(--c-green); }
 
 /* MINISTRIES */
 .ministries .h-display em { color: var(--c-green); }
@@ -1175,9 +1273,12 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .ministry-grid { grid-template-columns: repeat(2, 1fr); }
   .footer__cols { grid-template-columns: 1fr 1fr; }
   .footer__col--brand { grid-column: span 2; }
-  .pillars { grid-template-columns: 1fr; gap: 20px; }
-  .story__grid { grid-template-columns: 1fr; }
-  .kingdom { grid-template-columns: 1fr; gap: 40px; }
+  .story__top { grid-template-columns: 1fr; }
+  .story__vm-item { grid-template-columns: 1fr; gap: 16px; }
+  .story__vm-motto { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .story__vm-motto-ref { margin-left: 0; }
+  .story__kingdom-strip { grid-template-columns: repeat(4, 1fr); }
+  .story__principles-grid { grid-template-columns: repeat(2, 1fr); }
   .masonry { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 1024px) {
@@ -1668,6 +1769,8 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .cs__programs-grid { grid-template-columns: 1fr; }
   .cs__hero-inner { flex-direction: column; text-align: center; }
   .cs__stats { justify-content: center; }
+  .story__kingdom-strip { grid-template-columns: repeat(4, 1fr); }
+  .story__principles-grid { grid-template-columns: 1fr; }
 }
 
 /* =============================================
