@@ -32,18 +32,6 @@ export default function Welcome() {
               </div>
             </div>
           </div>
-          <div className="welcome__video">
-            <div className="welcome__video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/9cUHwIk2C7Q"
-                title="Welcome to Our Jesus Lives Ministries"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-            <p className="welcome__video-label">Get to know our church</p>
-          </div>
         </div>
       </div>
     </section>
