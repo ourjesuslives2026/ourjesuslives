@@ -1,29 +1,8 @@
 import { useReveal } from '../hooks/useReveal';
 
-const kingdomValues = [
-  { letter: 'K', word: 'Kindness' },
-  { letter: 'I', word: 'Integrity' },
-  { letter: 'N', word: 'Non-judgemental' },
-  { letter: 'G', word: 'Godliness' },
-  { letter: 'D', word: 'Dynamism' },
-  { letter: 'O', word: 'Obedience' },
-  { letter: 'M', word: 'Meekness' },
-];
-
-const principles = [
-  { word: 'Abide',            desc: 'Rooted in Christ & His Kingdom', ref: 'John 15:4' },
-  { word: 'Affirm',           desc: 'The work of the Holy Spirit',    ref: null },
-  { word: 'Compliment',       desc: 'Honour each other',              ref: null },
-  { word: 'Be Constructive',  desc: 'Build up, never tear down',      ref: null },
-  { word: 'Ownership',        desc: 'Take responsibility',            ref: null },
-  { word: 'Be Transparent',   desc: 'Walk in honesty and openness',   ref: null },
-  { word: 'Volunteer',        desc: 'Give of yourself and be a host', ref: null },
-];
-
 export default function Story() {
-  const topRef   = useReveal();
-  const vmRef    = useReveal();
-  const kingRef  = useReveal();
+  const topRef  = useReveal();
+  const vmRef   = useReveal();
 
   return (
     <section className="story" id="story">
@@ -99,35 +78,6 @@ export default function Story() {
           </div>
         </div>
 
-      </div>
-
-      {/* ── KINGDOM VALUES strip (full bleed) ── */}
-      <div className="story__kingdom reveal" ref={kingRef}>
-        <div className="container">
-          <p className="story__kingdom-eyebrow">OJLM (KINGDOM) Values</p>
-          <div className="story__kingdom-strip">
-            {kingdomValues.map(v => (
-              <div key={v.letter} className="story__kv">
-                <span className="story__kv-letter">{v.letter}</span>
-                <span className="story__kv-word">{v.word}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="story__principles">
-            <p className="story__kingdom-eyebrow" style={{ marginTop: '52px' }}>OJLM (KINGDOM) Principles</p>
-            <div className="story__principles-grid">
-              {principles.map((p, i) => (
-                <div key={i} className="story__principle">
-                  <span className="story__principle-word">{p.word}</span>
-                  <span className="story__principle-desc">
-                    {p.desc}{p.ref && <em> — {p.ref}</em>}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
 
     </section>
