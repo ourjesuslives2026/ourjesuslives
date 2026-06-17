@@ -5,6 +5,10 @@ const slides = [
     src: '/assets/inheritance.jpg',
     alt: '2026 — Possessing Our Inheritance',
   },
+  {
+    src: '/assets/hero-church.jpg',
+    alt: 'Our church family gathered in worship',
+  },
 ];
 
 const marqueeItems = [
@@ -26,7 +30,7 @@ export default function Hero() {
         setPrev(null);
         setFading(false);
       }, 1000);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [current]);
 
