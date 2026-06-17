@@ -24,6 +24,9 @@ export const careSharePrograms = [
           'Reached 40+ homeless individuals with hot meals and essential supplies',
           'Partnered with local volunteers to set up regular monthly outreach',
         ],
+        photos: [
+          '/assets/care-share/uk/1.jpg',
+        ],
       },
       {
         month: 'March 2017',
@@ -33,6 +36,10 @@ export const careSharePrograms = [
           'Included fresh produce, tinned goods, and household essentials',
           'Expanded reach to Rotherham and Barnsley for the first time',
         ],
+        photos: [
+          '/assets/care-share/uk/2.jpg',
+          '/assets/care-share/uk/3.jpg',
+        ],
       },
       {
         month: 'November 2019',
@@ -41,6 +48,10 @@ export const careSharePrograms = [
           'Distributed warm clothing packages — coats, gloves, and scarves — to 120+ rough sleepers',
           'Hot soup and food parcels served at Sheffield city centre outreach point',
           'Collaborated with other local charities for joint distribution event',
+        ],
+        photos: [
+          '/assets/care-share/uk/4.jpg',
+          '/assets/care-share/uk/5.jpg',
         ],
       },
       {
@@ -59,6 +70,9 @@ export const careSharePrograms = [
           'Packed and distributed 150 Christmas hampers to struggling families',
           'Organised toy collection for children in low-income households',
           'Hot meals served to homeless individuals at Sheffield outreach point',
+        ],
+        photos: [
+          '/assets/care-share/uk/6.jpg',
         ],
       },
       {
@@ -117,6 +131,10 @@ export const careSharePrograms = [
           'Met with local pastors and village leaders to identify the most vulnerable families',
           'Identified 3 key villages for initial outreach programmes',
         ],
+        photos: [
+          '/assets/care-share/nepal/1.jpg',
+          '/assets/care-share/nepal/2.jpg',
+        ],
       },
       {
         month: 'March 2018',
@@ -125,6 +143,10 @@ export const careSharePrograms = [
           'Distributed school bags, notebooks, pens, and stationery sets to 50+ children',
           'Partnered with a local school to identify children who lacked basic learning materials',
           'Prayed with families and encouraged them in their faith',
+        ],
+        photos: [
+          '/assets/care-share/nepal/3.jpg',
+          '/assets/care-share/nepal/4.jpg',
         ],
       },
       {
@@ -135,6 +157,10 @@ export const careSharePrograms = [
           'Targeted mountain communities where winters are especially harsh',
           'Food packets distributed alongside clothing to 80 households',
         ],
+        photos: [
+          '/assets/care-share/nepal/5.jpg',
+          '/assets/care-share/nepal/6.jpg',
+        ],
       },
       {
         month: 'March 2019',
@@ -143,6 +169,10 @@ export const careSharePrograms = [
           'Distributed food packets — rice, lentils, oil, and spices — to 120 underprivileged families',
           'Reached families in 2 additional villages beyond the original programme',
           'School stationery top-up distribution to 40 children',
+        ],
+        photos: [
+          '/assets/care-share/nepal/7.jpg',
+          '/assets/care-share/nepal/8.jpg',
         ],
       },
       {
@@ -210,6 +240,9 @@ export const careSharePrograms = [
           'First food distribution reached 60 families with rice, lentils, and cooking essentials',
           'Identified key areas of need for ongoing support',
         ],
+        photos: [
+          '/assets/care-share/kerala/1.jpg',
+        ],
       },
       {
         month: 'October 2016',
@@ -218,6 +251,10 @@ export const careSharePrograms = [
           'Emergency food packages distributed to 100+ families affected by seasonal flooding',
           'Clothing and household essentials provided to displaced families',
           'Coordinated with local volunteers for rapid response distribution',
+        ],
+        photos: [
+          '/assets/care-share/kerala/2.jpg',
+          '/assets/care-share/kerala/3.jpg',
         ],
       },
       {
@@ -238,6 +275,10 @@ export const careSharePrograms = [
           'Supported local relief camps with supplies and volunteer manpower',
           'Raised funds from UK congregation for ongoing flood relief efforts',
         ],
+        photos: [
+          '/assets/care-share/kerala/4.jpg',
+          '/assets/care-share/kerala/5.jpg',
+        ],
       },
       {
         month: 'March 2020',
@@ -255,6 +296,9 @@ export const careSharePrograms = [
           'Regular annual food distribution reached 150 families across 4 communities',
           'Cooking oil, rice, sugar, tea, and tinned goods included in each package',
           'Education supply kits distributed to 50 school-age children',
+        ],
+        photos: [
+          '/assets/care-share/kerala/6.jpg',
         ],
       },
       {
@@ -295,6 +339,10 @@ export const careSharePrograms = [
           'Distributed food supplies: rice, lentils, milk powder, biscuits, and cooking oil',
           'Donated clothing, shoes, and school stationery to every child',
         ],
+        photos: [
+          '/assets/care-share/chennai/1.jpg',
+          '/assets/care-share/chennai/2.jpg',
+        ],
       },
       {
         month: 'July 2017',
@@ -312,6 +360,10 @@ export const careSharePrograms = [
           'Organised a Christmas celebration for 120+ orphaned children across 2 homes',
           'Gifts, toys, and clothing distributed to every child',
           'Food packages including festive treats delivered to both orphanages',
+        ],
+        photos: [
+          '/assets/care-share/chennai/3.jpg',
+          '/assets/care-share/chennai/4.jpg',
         ],
       },
       {
@@ -339,6 +391,10 @@ export const careSharePrograms = [
           'Returned in person after travel restrictions lifted — largest visit yet',
           'Food and household supplies distributed to 200+ children across 3 homes',
           'School supply kits provided to all school-age children ahead of new academic year',
+        ],
+        photos: [
+          '/assets/care-share/chennai/5.jpg',
+          '/assets/care-share/chennai/6.jpg',
         ],
       },
       {
@@ -376,18 +432,25 @@ export const careSharePrograms = [
         month: 'March 2017',
         title: 'First Slum Community Outreach',
         items: [
-          'First visit to a large informal settlement (slum) on the outskirts of Mumbai',
+          'First visit to a large informal settlement on the outskirts of Mumbai',
           'Food packages — rice, dal, oil, and spices — distributed to 70 families',
           'Met with community leaders to assess ongoing needs and plan future visits',
+        ],
+        photos: [
+          '/assets/care-share/mumbai/1.jpg',
+          '/assets/care-share/mumbai/2.jpg',
         ],
       },
       {
         month: 'October 2017',
         title: 'Clothing & Essentials Drive',
         items: [
-          'Second visit — distributed clothing, footwear, and household essentials to 100 families',
+          'Distributed clothing, footwear, and household essentials to 100 families',
           'Children\'s clothing and school supplies included in every family package',
           'Partnered with a local Mumbai church for on-ground support and translation',
+        ],
+        photos: [
+          '/assets/care-share/mumbai/3.jpg',
         ],
       },
       {
@@ -407,6 +470,10 @@ export const careSharePrograms = [
           'Food packets, clean water sachets, and waterproof sheets given to 150 families',
           'Partnered with two local organisations for rapid deployment of aid',
         ],
+        photos: [
+          '/assets/care-share/mumbai/4.jpg',
+          '/assets/care-share/mumbai/5.jpg',
+        ],
       },
       {
         month: 'December 2020',
@@ -424,6 +491,9 @@ export const careSharePrograms = [
           'Reached 4 slum communities in a single distribution drive — largest to date',
           'Food, clothing, and household essentials distributed to 280 families',
           'Community prayer meetings held at each location, led by local pastors',
+        ],
+        photos: [
+          '/assets/care-share/mumbai/6.jpg',
         ],
       },
       {

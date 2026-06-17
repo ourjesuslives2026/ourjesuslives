@@ -1,9 +1,86 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { getProgramById } from '../data/careSharePrograms';
+
+function PhotoLightbox({ photos, startIdx, onClose }) {
+  const [idx, setIdx] = useState(startIdx);
+
+  const prev = useCallback(() => setIdx(i => (i - 1 + photos.length) % photos.length), [photos.length]);
+  const next = useCallback(() => setIdx(i => (i + 1) % photos.length), [photos.length]);
+
+  useEffect(() => {
+    const handler = e => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    };
+    document.addEventListener('keydown', handler);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handler);
+      document.body.style.overflow = '';
+    };
+  }, [onClose, prev, next]);
+
+  return (
+    <div className="csp-lb" onClick={onClose} role="dialog" aria-modal="true">
+      <div className="csp-lb__panel" onClick={e => e.stopPropagation()}>
+        <button className="csp-lb__close" onClick={onClose} aria-label="Close">✕</button>
+        {photos.length > 1 && (
+          <button className="csp-lb__prev" onClick={prev} aria-label="Previous">‹</button>
+        )}
+        <div className="csp-lb__img">
+          <img src={photos[idx]} alt="" />
+        </div>
+        {photos.length > 1 && (
+          <button className="csp-lb__next" onClick={next} aria-label="Next">›</button>
+        )}
+        {photos.length > 1 && (
+          <div className="csp-lb__counter">{idx + 1} / {photos.length}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ActivityPhotos({ photos }) {
+  const [lightbox, setLightbox] = useState(null);
+  const allPhotos = photos || [];
+  if (!allPhotos.length) return null;
+
+  return (
+    <>
+      <div className={`csp__photo-strip csp__photo-strip--${Math.min(allPhotos.length, 3)}`}>
+        {allPhotos.map((src, i) => (
+          <button
+            key={i}
+            className="csp__photo-thumb"
+            onClick={() => setLightbox(i)}
+            aria-label={`View photo ${i + 1}`}
+          >
+            <img src={src} alt="" loading="lazy" />
+            <div className="csp__photo-thumb-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                <path d="M11 8v6M8 11h6"/>
+              </svg>
+            </div>
+          </button>
+        ))}
+      </div>
+      {lightbox !== null && (
+        <PhotoLightbox
+          photos={allPhotos}
+          startIdx={lightbox}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </>
+  );
+}
 
 export default function CareShareProgramPage() {
   const { programId } = useParams();
@@ -40,7 +117,7 @@ export default function CareShareProgramPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Stats bar */}
       <section className="csp__stats-bar">
         <div className="container csp__stats-row">
           {program.stats.map((s, i) => (
@@ -66,7 +143,7 @@ export default function CareShareProgramPage() {
         </div>
       </section>
 
-      {/* Activity Log */}
+      {/* Activity log with photos */}
       <section className="csp__activities">
         <div className="container">
           <p className="csp__section-label">Activities &amp; Help Distribution</p>
@@ -74,11 +151,17 @@ export default function CareShareProgramPage() {
 
           <div className="csp__timeline">
             {program.activities.map((act, i) => (
-              <div key={i} className="csp__timeline-item">
+              <div
+                key={i}
+                className={`csp__timeline-item${act.photos?.length ? ' csp__timeline-item--has-photos' : ''}`}
+              >
+                {/* Left — date */}
                 <div className="csp__timeline-left">
                   <div className="csp__timeline-dot" />
                   <div className="csp__timeline-month">{act.month}</div>
                 </div>
+
+                {/* Right — content + photos */}
                 <div className="csp__timeline-right">
                   <h3 className="csp__timeline-title">{act.title}</h3>
                   <ul className="csp__timeline-list">
@@ -86,6 +169,7 @@ export default function CareShareProgramPage() {
                       <li key={j}>{item}</li>
                     ))}
                   </ul>
+                  <ActivityPhotos photos={act.photos} />
                 </div>
               </div>
             ))}
