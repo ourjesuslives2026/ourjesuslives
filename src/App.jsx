@@ -14,6 +14,7 @@ import BranchDetail from './pages/BranchDetail';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import CareSharePage from './pages/CareSharePage';
+import CareShareProgramPage from './pages/CareShareProgramPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/care-share" element={<CareSharePage />} />
+        <Route path="/care-share/:programId" element={<CareShareProgramPage />} />
       </Routes>
     </BrowserRouter>
   );

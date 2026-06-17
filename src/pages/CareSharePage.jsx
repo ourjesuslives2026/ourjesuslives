@@ -1,45 +1,17 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import TopBar from '../components/TopBar';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import { careSharePrograms } from '../data/careSharePrograms';
 
-const programs = [
-  {
-    id: 'uk',
-    name: 'Care & Share UK',
-    location: 'United Kingdom',
-    img: '/assets/care-share-uk.jpg',
-    desc: 'Supporting vulnerable families and individuals across the UK with food, clothing, and practical assistance. Our UK team works alongside local communities to bring the love of Christ in tangible ways.',
-  },
-  {
-    id: 'nepal',
-    name: 'Care & Share Nepal',
-    location: 'Nepal',
-    img: '/assets/care-share-nepal.jpg',
-    desc: 'Providing essential aid to communities in Nepal — one of the world\'s most vulnerable nations. From disaster relief to long-term support, we stand with our brothers and sisters in their time of need.',
-  },
-  {
-    id: 'kerala',
-    name: 'Care & Share Kerala',
-    location: 'Kerala, India',
-    img: '/assets/care-share-kerala.jpg',
-    desc: 'Reaching out to families in Kerala through food distribution, education support, and community outreach programmes that bring hope and dignity to those in need.',
-  },
-  {
-    id: 'chennai',
-    name: 'Care & Share Chennai',
-    location: 'Chennai, India',
-    img: '/assets/care-share-chennai.jpg',
-    desc: 'Serving the urban poor and marginalised communities in Chennai with practical compassion — distributing essentials and uplifting families struggling with poverty and hardship.',
-  },
-  {
-    id: 'mumbai',
-    name: 'Care & Share Mumbai',
-    location: 'Mumbai, India',
-    img: '/assets/care-share-mumbai.jpg',
-    desc: 'Working in the heart of Mumbai to bring relief and restoration to those living on the margins — providing food, clothing, and the good news of Jesus Christ.',
-  },
-];
+const programs = careSharePrograms.map(p => ({
+  id: p.id,
+  name: p.name,
+  location: p.location,
+  img: p.img,
+  desc: p.about[0],
+}));
 
 export default function CareSharePage() {
   useEffect(() => {
@@ -126,6 +98,9 @@ export default function CareSharePage() {
                     {p.location}
                   </p>
                   <p className="cs__program-desc">{p.desc}</p>
+                  <Link to={`/care-share/${p.id}`} className="cs__program-link">
+                    View Programme →
+                  </Link>
                 </div>
               </article>
             ))}
