@@ -1594,11 +1594,36 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
    CARE & SHARE PAGE
 ───────────────────────────────────────── */
 .cs__hero {
-  background: var(--c-paper);
+  position: relative;
   padding: clamp(100px, 12vw, 160px) 0 clamp(60px, 7vw, 100px);
-  border-bottom: 1px solid var(--c-line);
+  overflow: hidden;
+}
+.cs__hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.cs__hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  filter: saturate(0.7);
+}
+.cs__hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(10,14,26,0.82) 0%,
+    rgba(10,14,26,0.60) 55%,
+    rgba(10,14,26,0.35) 100%
+  );
 }
 .cs__hero-inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: clamp(32px, 5vw, 80px);
@@ -1614,11 +1639,11 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--c-blue);
+  color: var(--c-green);
   margin-bottom: 16px;
 }
-.cs__heading { margin-bottom: 20px; }
-.cs__sub { color: var(--c-muted); max-width: 56ch; }
+.cs__heading { margin-bottom: 20px; color: #fff; }
+.cs__sub { color: rgba(255,255,255,0.75); max-width: 56ch; }
 
 /* About */
 .cs__about {
