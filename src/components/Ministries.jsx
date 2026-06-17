@@ -21,20 +21,6 @@ const ministries = [
     verse: { text: 'And it shall come to pass afterward That I will pour out My Spirit on all flesh; Your sons and your daughters shall prophesy, Your old men shall dream dreams, Your young men shall see visions.', ref: 'Joel 2:28' },
     tag: 'Last Saturday of every month',
   },
-  {
-    idx: '03',
-    icon: <svg viewBox="0 0 48 48"><path d="M24 8v32M16 16v16M32 16v16M8 24h32" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>,
-    title: 'Prayer Ministry',
-    body: 'Standing together in prayer for families, individuals, churches, and communities.',
-    tag: 'Weekly + on-request',
-  },
-  {
-    idx: '04',
-    icon: <svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><path d="M20 38h8M18 42h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M20 18l8 4-8 4z" fill="currentColor"/></svg>,
-    title: 'Social Media Ministry',
-    body: 'Sharing the message of Jesus through digital platforms, teaching resources and online content.',
-    tag: 'Online · Worldwide',
-  },
 ];
 
 export default function Ministries() {
