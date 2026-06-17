@@ -66,8 +66,8 @@ export default function Hero() {
         <div className="hero__copy-full">
           <h1 className="display">
             <span className="hero__heading-top">Possessing Our</span>
-            <span className="hero__inherit-word" aria-label="Inheritance.">
-              <em>I</em><b>NHE</b><em>R</em><b>ITANCE.</b>
+            <span className="hero__inherit-word" aria-label="Inheritance">
+              <em>I</em><b>NHE</b><em>R</em><b>ITANCE</b>
             </span>
           </h1>
           <p className="hero__sub-full">
