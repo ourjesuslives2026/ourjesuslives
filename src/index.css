@@ -1614,20 +1614,16 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgba(10,14,26,0.82) 0%,
-    rgba(10,14,26,0.60) 55%,
-    rgba(10,14,26,0.35) 100%
-  );
+  background: rgba(10,14,26,0.62);
 }
 .cs__hero-inner {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(32px, 5vw, 80px);
-  flex-wrap: wrap;
+  text-align: center;
+  gap: clamp(24px, 3vw, 40px);
 }
 .cs__logo {
   width: clamp(100px, 12vw, 160px);
@@ -2276,7 +2272,8 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   padding-bottom: clamp(60px, 8vw, 100px);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 20px;
 }
 .yp__back {
@@ -2319,7 +2316,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   line-height: 1.6;
   margin: 0;
 }
-.yp__hero-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.yp__hero-meta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 .yp__hero-badge {
   display: inline-flex;
   align-items: center;

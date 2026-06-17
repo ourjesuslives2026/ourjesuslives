@@ -75,7 +75,6 @@ export default function YouthPage() {
         </div>
         <div className="yp__hero-overlay" />
         <div className="container yp__hero-inner">
-          <Link to="/#ministries" className="yp__back">← Back to Ministries</Link>
           <p className="yp__eyebrow">Youth Ministry</p>
           <h1 className="yp__hero-heading">
             A Generation<br /><em>4 Jesus</em>
