@@ -15,6 +15,7 @@ import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import CareSharePage from './pages/CareSharePage';
 import CareShareProgramPage from './pages/CareShareProgramPage';
+import YouthPage from './pages/YouthPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/care-share" element={<CareSharePage />} />
         <Route path="/care-share/:programId" element={<CareShareProgramPage />} />
+        <Route path="/youth" element={<YouthPage />} />
       </Routes>
     </BrowserRouter>
   );

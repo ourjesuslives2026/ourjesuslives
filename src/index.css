@@ -2086,3 +2086,333 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .csp__stats-row { gap: 20px; }
   .csp__cta-btns { flex-direction: column; align-items: center; }
 }
+
+/* =============================================
+   YOUTH MINISTRY PAGE (.yp__)
+   ============================================= */
+
+/* Hero */
+.yp__hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.yp__hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.yp__hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(0.6);
+}
+.yp__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,14,26,0.3) 0%, rgba(10,14,26,0.88) 80%);
+}
+.yp__hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(60px, 8vw, 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.yp__back {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-bottom: 4px;
+}
+.yp__back:hover { color: var(--c-green); }
+.yp__eyebrow {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  margin: 0;
+}
+.yp__hero-heading {
+  font-family: var(--f-serif);
+  font-size: clamp(52px, 9vw, 120px);
+  font-weight: 400;
+  color: var(--c-cream);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-synthesis: none;
+}
+.yp__hero-heading em {
+  font-style: italic;
+  color: var(--c-green);
+}
+.yp__hero-desc {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+.yp__hero-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.yp__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.75);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 99px;
+  backdrop-filter: blur(8px);
+}
+
+/* Mission */
+.yp__mission {
+  background: var(--c-cream);
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+.yp__mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+.yp__section-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin: 0 0 16px;
+}
+.yp__mission-heading {
+  font-family: var(--f-serif);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+  font-synthesis: none;
+  color: var(--c-ink);
+}
+.yp__mission-heading em { font-style: italic; color: var(--c-green); }
+.yp__mission-body p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--c-ink-2);
+  margin-bottom: 20px;
+}
+.yp__mission-body p:last-of-type { margin-bottom: 28px; }
+.yp__cta-inline { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Photo mosaic */
+.yp__photos { overflow: hidden; }
+.yp__photo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 260px 260px;
+  gap: 4px;
+}
+.yp__photo-cell { overflow: hidden; }
+.yp__photo-cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.yp__photo-cell:hover img { transform: scale(1.04); }
+.yp__photo-cell--1 { grid-column: span 2; grid-row: span 2; }
+.yp__photo-cell--2 { grid-column: span 2; }
+.yp__photo-cell--3 { grid-column: span 2; }
+.yp__photo-cell--4 { grid-column: span 1; }
+.yp__photo-cell--5 { grid-column: span 2; }
+.yp__photo-cell--6 { grid-column: span 1; }
+
+/* What we do */
+.yp__what {
+  background: var(--c-ink);
+  color: var(--c-cream);
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+.yp__what-heading {
+  font-family: var(--f-serif);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 12px 0 52px;
+  font-synthesis: none;
+}
+.yp__what-heading em { font-style: italic; color: var(--c-green); }
+.yp__what-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.yp__what-card {
+  padding: 32px 28px;
+  border: 1px solid rgba(245,239,227,0.08);
+  transition: background 0.25s;
+}
+.yp__what-card:hover { background: rgba(245,239,227,0.04); }
+.yp__what-icon {
+  width: 48px; height: 48px;
+  color: var(--c-green);
+  margin-bottom: 24px;
+}
+.yp__what-icon svg { width: 100%; height: 100%; }
+.yp__what-title {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  font-synthesis: none;
+}
+.yp__what-body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(245,239,227,0.65);
+  margin: 0;
+}
+
+/* Verse */
+.yp__verse {
+  background: #f7f5f0;
+  padding: clamp(72px, 9vw, 110px) 0;
+  text-align: center;
+}
+.yp__verse-inner { max-width: 800px; margin: 0 auto; }
+.yp__verse-mark {
+  font-family: var(--f-serif);
+  font-size: clamp(80px, 12vw, 160px);
+  line-height: 0.8;
+  color: var(--c-green);
+  opacity: 0.25;
+  display: block;
+  margin-bottom: -0.2em;
+  font-synthesis: none;
+}
+.yp__verse blockquote { margin: 0; padding: 0; border: none; }
+.yp__verse-text {
+  font-family: var(--f-serif);
+  font-size: clamp(20px, 2.8vw, 34px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--c-ink);
+  margin: 0 0 24px;
+  font-synthesis: none;
+}
+.yp__verse-ref {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  font-style: normal;
+}
+
+/* When we meet */
+.yp__meet {
+  background: var(--c-blue);
+  color: var(--c-cream);
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+.yp__meet-inner { text-align: center; }
+.yp__meet-heading {
+  font-family: var(--f-serif);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 12px 0 20px;
+  font-synthesis: none;
+}
+.yp__meet-heading em { font-style: italic; color: rgba(255,255,255,0.65); }
+.yp__meet-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  margin: 0 auto 52px;
+  line-height: 1.65;
+}
+.yp__meet-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.yp__meet-card {
+  background: rgba(255,255,255,0.07);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.yp__meet-card-icon { color: rgba(255,255,255,0.5); }
+.yp__meet-card-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.yp__meet-card-value {
+  font-family: var(--f-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--c-cream);
+  font-synthesis: none;
+  line-height: 1.3;
+}
+
+/* CTA */
+.yp__cta {
+  background: var(--c-cream);
+  padding: clamp(72px, 9vw, 120px) 0;
+  text-align: center;
+}
+.yp__cta-inner { max-width: 600px; margin: 0 auto; }
+.yp__cta-heading {
+  font-family: var(--f-serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  font-synthesis: none;
+  color: var(--c-ink);
+}
+.yp__cta-heading em { font-style: italic; color: var(--c-green); }
+.yp__cta-sub { color: var(--c-muted); margin-bottom: 36px; font-size: 17px; line-height: 1.6; }
+.yp__cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .yp__mission-grid { grid-template-columns: 1fr; }
+  .yp__what-grid { grid-template-columns: repeat(2, 1fr); }
+  .yp__photo-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
+  .yp__photo-cell--1 { grid-column: span 2; grid-row: span 1; }
+  .yp__photo-cell--2, .yp__photo-cell--3, .yp__photo-cell--4, .yp__photo-cell--5, .yp__photo-cell--6 { grid-column: span 1; }
+  .yp__meet-cards { grid-template-columns: 1fr; max-width: 400px; }
+}
+@media (max-width: 600px) {
+  .yp__what-grid { grid-template-columns: 1fr; }
+  .yp__photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .yp__cta-btns { flex-direction: column; align-items: center; }
+}

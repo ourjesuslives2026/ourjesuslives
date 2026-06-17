@@ -67,6 +67,9 @@ export default function Ministries() {
                   <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
                   <h3>{m.title}</h3>
                   <p>{m.body}</p>
+                  <div className="ministry-card__cta-row">
+                    <Link to="/youth" className="ministry-card__cta-btn">Learn More →</Link>
+                  </div>
                 </div>
                 <div className="ministry-card__fw-right">
                   {m.verse && (
