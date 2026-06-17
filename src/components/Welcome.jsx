@@ -13,16 +13,19 @@ export default function Welcome() {
             </h2>
           </div>
           <div className="welcome__right">
+            <blockquote className="welcome__verse">
+              <p>"You are the light of the world. A city set on a hill cannot be hidden."</p>
+              <cite>— Matthew 5:14</cite>
+            </blockquote>
             <p className="lead">
-              At Our Jesus Lives Ministries, we believe Jesus is the answer to the deepest
-              needs of this world. Our heart is to represent Christ with sincerity, compassion,
-              and clarity — helping individuals and families experience God's love through
-              worship, teaching, prayer, and fellowship.
+              We believe we are that light that shines on top of this beautiful city of Sheffield.
+              We are a non-denominational multicultural Church that welcomes every person
+              created in the image of God — beyond every barrier of culture, race, and tradition.
             </p>
             <p>
-              Whether you are new to church, new to the UK, or looking for a spiritual
-              family, we warmly welcome you. Come as you are — there is a seat saved
-              for you on Sunday.
+              We stand on the Kingdom values of Heaven and preach every believer to
+              practise the values Jesus taught in Matthew chapter 5. We are a friendly church
+              that promotes Kingdom principles and values to work in the same attitude of Christ.
             </p>
             <div className="welcome__sig">
               <div className="welcome__sig-line" />

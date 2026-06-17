@@ -673,6 +673,9 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 }
 .welcome__right p { font-size: 17px; margin-bottom: 18px; color: var(--c-ink-2); max-width: 52ch; }
 .welcome__right p.lead { font-size: 22px; font-weight: 400; color: var(--c-ink); }
+.welcome__verse { margin: 0 0 28px; padding: 0 0 0 18px; border-left: 3px solid var(--c-green); }
+.welcome__verse p { font-family: var(--f-serif); font-style: italic; font-size: 18px; line-height: 1.5; color: var(--c-ink); margin: 0 0 6px; font-synthesis: none; }
+.welcome__verse cite { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-muted); font-style: normal; }
 .welcome__sig { display: flex; align-items: center; gap: 18px; margin-top: 36px; }
 .welcome__sig-line { width: 64px; height: 1px; background: var(--c-gold-d); }
 .welcome__sig-name { font-family: var(--f-serif); font-style: italic; font-size: 22px; font-synthesis: none; }
@@ -798,6 +801,70 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .pillar h4 { font-family: var(--f-serif); font-size: 22px; font-weight: 400; margin-bottom: 10px; letter-spacing: -0.01em; font-synthesis: none; }
 .pillar p { font-size: 14.5px; color: rgba(245,239,227,0.65); margin: 0; line-height: 1.5; }
 
+/* KINGDOM Values & Principles */
+.kingdom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  margin-top: clamp(56px, 6vw, 80px);
+  padding-top: 48px;
+  border-top: 1px solid rgba(245,239,227,0.12);
+  align-items: start;
+}
+.kingdom__label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-green);
+  margin: 0 0 24px;
+}
+/* Acrostic */
+.kingdom__acrostic { display: flex; flex-direction: column; gap: 10px; }
+.kingdom__row { display: flex; align-items: baseline; gap: 0; }
+.kingdom__letter {
+  font-family: var(--f-serif);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 400;
+  color: var(--c-green);
+  line-height: 1;
+  width: 36px;
+  flex-shrink: 0;
+  font-synthesis: none;
+}
+.kingdom__word {
+  font-size: 15px;
+  color: rgba(245,239,227,0.75);
+  letter-spacing: 0.01em;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed rgba(245,239,227,0.12);
+  flex: 1;
+  padding-left: 2px;
+  line-height: 2;
+}
+/* Principles list */
+.kingdom__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.kingdom__item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(245,239,227,0.1);
+}
+.kingdom__item:last-child { border-bottom: none; }
+.kingdom__item-word {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-cream);
+  margin-bottom: 3px;
+}
+.kingdom__item-desc {
+  font-size: 13px;
+  color: rgba(245,239,227,0.55);
+  line-height: 1.4;
+}
+
 /* MINISTRIES */
 .ministries .h-display em { color: var(--c-green); }
 .ministries { padding: clamp(80px, 10vw, 140px) 0; }
@@ -896,6 +963,10 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .qw--hi { color: #0A5BA8; }
 .qw--en { color: #2B8C42; }
 .qw:hover { transform: translateY(-3px) rotate(-1.5deg); }
+.quote__eyebrow { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-green); margin-bottom: 8px; }
+.quote__cite { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); margin-top: 32px; }
+.quote__motto { font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 2vw, 20px); color: var(--c-ink); margin-top: 20px; opacity: 0.7; font-synthesis: none; }
+.quote__motto em { font-style: italic; color: var(--c-ink); }
 .quote__bible { margin: clamp(48px, 6vw, 80px) auto 0; max-width: 880px; }
 .quote__bible img { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 50px rgba(16,24,40,0.18)); }
 .quote__cite { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); margin-top: 32px; }
@@ -1106,6 +1177,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .footer__col--brand { grid-column: span 2; }
   .pillars { grid-template-columns: 1fr; gap: 20px; }
   .story__grid { grid-template-columns: 1fr; }
+  .kingdom { grid-template-columns: 1fr; gap: 40px; }
   .masonry { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 1024px) {
