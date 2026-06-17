@@ -102,10 +102,6 @@ export default function Gallery() {
               aria-label={`View: ${c.desc}`}
             >
               <img src={c.img} alt={c.desc} loading="lazy" />
-              <div className="m-cell__inner">
-                <span className="m-cell__tag">{c.tag}</span>
-                <span className="m-cell__desc">{c.desc}</span>
-              </div>
             </div>
           ))}
         </div>

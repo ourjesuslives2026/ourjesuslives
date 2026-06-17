@@ -85,10 +85,6 @@ export default function GalleryPage() {
               aria-label={`View: ${p.desc}`}
             >
               <img src={p.img} alt={p.desc} loading="lazy" />
-              <div className="gp__cell-overlay">
-                <span className="gp__cell-tag">{p.tag}</span>
-                <span className="gp__cell-desc">{p.desc}</span>
-              </div>
             </div>
           ))}
         </div>
