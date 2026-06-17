@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 
 const ministries = [
@@ -46,7 +47,10 @@ export default function Ministries() {
                   <div className="ministry-card__icon" aria-hidden="true">{m.icon}</div>
                   <h3>{m.title}</h3>
                   <p>{m.body}</p>
-                  <span className="ministry-card__tag">{m.tag}</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                    <span className="ministry-card__tag">{m.tag}</span>
+                    <Link to="/care-share" className="ministry-card__link">Learn More →</Link>
+                  </div>
                 </div>
                 <div className="ministry-card__photos" aria-hidden="true">
                   {m.images.map((img, i) => (
