@@ -9,8 +9,8 @@ export default function Quote() {
       <span className="quote__blob quote__blob--hi" aria-hidden="true" />
       <span className="quote__blob quote__blob--en" aria-hidden="true" />
       <div className="container">
-        <div className="quote__eyebrow">OJLM Core Verse</div>
         <div className="quote__mark">&ldquo;</div>
+        <div className="quote__eyebrow">OJLM Core Verse</div>
         <p className="quote__text">
           If we claim to live by the Holy Spirit,<br />
           <em>

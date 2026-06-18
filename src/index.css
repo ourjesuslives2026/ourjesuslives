@@ -1093,7 +1093,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .qw--hi { color: #0A5BA8; }
 .qw--en { color: #2B8C42; }
 .qw:hover { transform: translateY(-3px) rotate(-1.5deg); }
-.quote__eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-green); margin-bottom: 8px; }
+.quote__eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-green); margin-bottom: 20px; margin-top: 16px; }
 .quote__cite { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); margin-top: 32px; }
 .quote__motto { font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 2vw, 20px); color: var(--c-ink); margin-top: 20px; opacity: 0.7; font-synthesis: none; }
 .quote__motto em { font-style: italic; color: var(--c-ink); }
