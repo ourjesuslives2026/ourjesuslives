@@ -158,8 +158,8 @@ export const careSharePrograms = [
           'Food packets distributed alongside clothing to 80 households',
         ],
         photos: [
-          '/assets/care-share/nepal/5.jpg',
-          '/assets/care-share/nepal/6.jpg',
+          '/assets/care-share/nepal/new-1.jpg',
+          '/assets/care-share/nepal/new-3.jpg',
         ],
       },
       {
@@ -183,6 +183,10 @@ export const careSharePrograms = [
           'Blankets, warm clothing, and food packages distributed across 3 villages',
           'Child sponsorship programme launched — 12 children enrolled for annual support',
         ],
+        photos: [
+          '/assets/care-share/nepal/new-2.jpg',
+          '/assets/care-share/nepal/new-4.jpg',
+        ],
       },
       {
         month: 'February 2020',
@@ -191,6 +195,21 @@ export const careSharePrograms = [
           'School stationery and supply kits distributed to 80+ children',
           'Child sponsorship programme expanded — 25 children now in annual programme',
           'Local school received donated teaching materials and children\'s books',
+        ],
+      },
+      {
+        month: 'August 2022',
+        title: 'Free Medical Camp at Bal Mitra School',
+        items: [
+          'Organised a free medical camp for children and families at Bal Mitra School, Kathmandu',
+          'Doctors and nurses from the UK team provided consultations, check-ups, and medicines',
+          'Over 100 children examined; medicines distributed free of charge to every family',
+        ],
+        photos: [
+          '/assets/care-share/nepal/new-6.jpg',
+          '/assets/care-share/nepal/new-7.jpg',
+          '/assets/care-share/nepal/new-8.jpg',
+          '/assets/care-share/nepal/new-9.jpg',
         ],
       },
       {
@@ -209,6 +228,9 @@ export const careSharePrograms = [
           'Blankets, coats, and thermal wear distributed to 250+ individuals in mountain villages',
           'School bags and stationery kits given to 60+ children for the new academic year',
           'Food packages — rice, pulses, cooking oil — distributed to 100 households',
+        ],
+        photos: [
+          '/assets/care-share/nepal/new-5.jpg',
         ],
       },
     ],
@@ -395,6 +417,21 @@ export const careSharePrograms = [
         photos: [
           '/assets/care-share/chennai/5.jpg',
           '/assets/care-share/chennai/6.jpg',
+        ],
+      },
+      {
+        month: 'June 2024',
+        title: 'Tirunelveli Food Bank Distribution',
+        items: [
+          'Extended outreach to Tirunelveli, Tamil Nadu — partnering with local DCM Ministries church',
+          'Food packages including rice, lentils, and essential groceries distributed to 80+ families',
+          'Elderly, widows, and young families were prioritised for care and support',
+        ],
+        photos: [
+          '/assets/care-share/chennai/new-1.jpg',
+          '/assets/care-share/chennai/new-2.jpg',
+          '/assets/care-share/chennai/new-3.jpg',
+          '/assets/care-share/chennai/new-4.jpg',
         ],
       },
       {
