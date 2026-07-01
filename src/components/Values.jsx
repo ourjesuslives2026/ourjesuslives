@@ -28,7 +28,7 @@ export default function Values() {
         <div className="values__grid reveal" ref={ref}>
 
           {/* KINGDOM Values */}
-          <div className="values__col">
+          <div className="values__card">
             <p className="values__label">Our Values</p>
             <h2 className="values__heading"><em>KINGDOM</em> Values</h2>
             <ul className="values__list">
@@ -42,7 +42,7 @@ export default function Values() {
           </div>
 
           {/* Kingdom Principles */}
-          <div className="values__col">
+          <div className="values__card">
             <p className="values__label">Our Principles</p>
             <h2 className="values__heading">Kingdom <em>Principles</em></h2>
             <ul className="values__principles">
