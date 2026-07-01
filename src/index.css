@@ -988,7 +988,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .ministries .h-display em { color: var(--c-green); }
 .ministries { padding: clamp(80px, 10vw, 140px) 0; }
 .ministries__head { max-width: 920px; margin: 0 auto clamp(48px, 6vw, 72px); padding: 0 var(--pad); text-align: center; }
-.ministries__head .h-display { margin-bottom: clamp(20px, 2.5vw, 32px); }
+.ministries__head .h-display { margin-bottom: clamp(20px, 2.5vw, 32px); text-align: center; }
 
 /* Billboard grid */
 .min-billboard {
