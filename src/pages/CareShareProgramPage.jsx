@@ -115,7 +115,7 @@ export default function CareShareProgramPage() {
           <h2 className="csp__activities-heading">What we have <em>done</em></h2>
 
           <div className="csp__timeline">
-            {program.activities.map((act, i) => (
+            {[...program.activities].reverse().map((act, i) => (
               <div key={i} className="csp__timeline-item">
                 <div className="csp__timeline-left">
                   <div className="csp__timeline-dot" />
