@@ -13,10 +13,6 @@ export default function Welcome() {
             </h2>
           </div>
           <div className="welcome__right">
-            <blockquote className="welcome__verse">
-              <p>"You are the light of the world. A city set on a hill cannot be hidden."</p>
-              <cite>— Matthew 5:14</cite>
-            </blockquote>
             <p className="lead">
               We believe we are that light that shines on top of this beautiful city of Sheffield.
               We are a non-denominational multicultural Church that welcomes every person
