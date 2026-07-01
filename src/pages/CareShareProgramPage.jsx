@@ -82,18 +82,6 @@ export default function CareShareProgramPage() {
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="csp__stats-bar">
-        <div className="container csp__stats-row">
-          {program.stats.map((s, i) => (
-            <div key={i} className="csp__stat-item">
-              <div className="csp__stat-num">{s.num}</div>
-              <div className="csp__stat-label">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* About */}
       <section className="csp__about">
         <div className="container csp__about-grid">
