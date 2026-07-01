@@ -812,6 +812,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   gap: clamp(32px, 5vw, 64px);
   padding: clamp(36px, 5vw, 56px) 0;
 }
+.story__vm-item:last-child { padding-bottom: 0; }
 .story__vm-divider { height: 1px; background: rgba(245,239,227,0.1); }
 .story__vm-left {
   display: flex;
