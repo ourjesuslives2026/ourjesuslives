@@ -687,6 +687,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 /* BRANCHES */
 .branches { background: #f0f0f0; padding: clamp(80px, 10vw, 140px) 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); }
 .branches__head { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: end; margin-bottom: 56px; }
+.branches__head .h-display { margin-bottom: clamp(16px, 2vw, 28px); }
 .branches__filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
 .chip {
   font-family: var(--f-mono);
