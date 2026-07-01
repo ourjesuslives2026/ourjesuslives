@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Welcome from './components/Welcome';
 import Branches from './components/Branches';
 import Story from './components/Story';
+import Values from './components/Values';
 import Ministries from './components/Ministries';
 import Quote from './components/Quote';
 import Gallery from './components/Gallery';
@@ -28,6 +29,7 @@ function HomePage() {
         <Welcome />
         <Branches />
         <Story />
+        <Values />
         <Ministries />
         <Quote />
         <Gallery />

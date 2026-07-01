@@ -42,8 +42,9 @@ export default function Story() {
             </div>
             <div className="story__vm-right">
               <p className="story__vm-pull">
-                To stay on the same page of the Holy Spirit — sharing the Good News
-                of Jesus Christ to every soul in Sheffield and across the United Kingdom.
+                Our vision is to stay on the same page of the Holy Spirit who began
+                this wonderful ministry — to share the Good News of Jesus Christ to
+                every soul in Sheffield and this great nation, the United Kingdom.
               </p>
               <p className="story__vm-body">
                 Our aim is to bring many souls into God's kingdom for healing, deliverance,
@@ -60,13 +61,14 @@ export default function Story() {
             </div>
             <div className="story__vm-right">
               <p className="story__vm-pull">
-                To bring this nation back to Jesus — revival is the heartbeat of
-                every minute we spend in prayer.
+                Our prayer is to bring this nation back to Jesus who once brought
+                light to this nation. Revival is the heartbeat of every minute we
+                spend in prayer.
               </p>
               <p className="story__vm-body">
-                We believe our intercessory prayers are powerful enough to bring salvation
-                and freedom to every soul. Only Jesus and our prayers to Him can make this
-                nation great again. <em>We foresee this nation rise up once again for the glory of God.</em>
+                We strongly believe our intercessory prayers are powerful enough to bring
+                salvation and freedom to every soul in this nation. Only Jesus and our
+                prayers to Him can make this nation great again. <em>We foresee this nation rise up once again for the glory of God.</em>
               </p>
             </div>
           </div>
