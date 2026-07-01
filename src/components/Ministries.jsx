@@ -30,8 +30,9 @@ export default function Ministries() {
     <section className="ministries" id="ministries">
       <div className="container">
         <div className="ministries__head reveal" ref={headRef}>
-          <h2 className="h-display">Ministries that serve <em>every generation.</em></h2>
-          <p className="lead lead--tight">
+          <p className="ministries__eyebrow">Our Ministries</p>
+          <h2 className="ministries__title">Ministries that serve <em>every generation.</em></h2>
+          <p className="ministries__sub">
             Our ministries help individuals, families, children, youth and communities
             grow in faith and experience the love of Christ in practical ways.
           </p>
