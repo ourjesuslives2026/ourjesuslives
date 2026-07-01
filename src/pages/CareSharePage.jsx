@@ -62,20 +62,6 @@ export default function CareSharePage() {
               compassion, and practical support. Our teams across the UK and Asia work
               tirelessly to bring relief, restoration, and hope to those who need it most.
             </p>
-            <div className="cs__stats">
-              <div className="cs__stat">
-                <div className="cs__stat-num">2012</div>
-                <div className="cs__stat-label">Founded</div>
-              </div>
-              <div className="cs__stat">
-                <div className="cs__stat-num">5</div>
-                <div className="cs__stat-label">Regional Programmes</div>
-              </div>
-              <div className="cs__stat">
-                <div className="cs__stat-num">4+</div>
-                <div className="cs__stat-label">Countries Reached</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
