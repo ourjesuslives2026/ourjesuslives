@@ -114,7 +114,7 @@ export const careSharePrograms = [
     heroDesc: 'Nepal — a beautiful landlocked country — is home to one of the world\'s most vulnerable populations. We stand with our brothers and sisters in practical, lasting ways.',
     about: [
       'Nepal, a beautiful landlocked country, has one of the poorest populations in the world. Millions of Nepalese lack access to basic amenities including food, shelter, and education. A mission trip in 2018 by our church elders opened our eyes to the scale of need and inspired us to expand our charity work overseas.',
-      'We are committed to distributing school supplies, food, and winter clothing to communities in Nepal — and in the future, we aim to upgrade study levels in local schools, provide healthcare, and install vocational training centres to bring lasting change.',
+      'We are committed to supporting communities in Nepal by providing essential school supplies, food, and winter clothing. Looking ahead, our vision is to create lasting impact by improving educational standards in local schools, expanding access to healthcare, and establishing vocational training centres that empower individuals and strengthen communities for the future.',
     ],
     stats: [
       { num: '2018', label: 'First Mission Trip' },
