@@ -1103,7 +1103,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .quote__blob--en { width: 240px; height: 240px; top: 8%; right: 22%; background: #64BD4C; opacity: 0.28; }
 .quote .container { position: relative; z-index: 1; }
 .quote__mark { font-family: var(--f-serif); font-size: clamp(140px, 18vw, 220px); line-height: 0.85; background: linear-gradient(135deg, #E33629 0%, #FED200 40%, #64BD4C 70%, #0056A8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: 0.85; font-style: italic; display: block; margin-bottom: -0.25em; font-synthesis: none; }
-.quote__text { font-family: var(--f-serif); font-size: clamp(36px, 5.5vw, 76px); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; max-width: 18ch; margin: 0 auto; font-synthesis: none; }
+.quote__text { font-family: var(--f-serif); font-size: clamp(28px, 4vw, 58px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; max-width: 32ch; margin: 0 auto; font-synthesis: none; text-wrap: balance; }
 .quote__text em { font-style: italic; font-weight: 400; display: inline-block; margin-top: 4px; }
 .qw { display: inline-block; transition: transform 0.3s ease; }
 .qw--ml { color: #C8341F; }

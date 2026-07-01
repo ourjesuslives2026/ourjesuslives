@@ -12,7 +12,7 @@ export default function Quote() {
         <div className="quote__mark">&ldquo;</div>
         <div className="quote__eyebrow">OJLM Core Verse</div>
         <p className="quote__text">
-          If we claim to live by the Holy Spirit,<br />
+          If we claim to live by the Holy Spirit,{' '}
           <em>
             <span className="qw qw--ml">we</span>{' '}
             <span className="qw qw--ta">must</span>{' '}
@@ -22,9 +22,8 @@ export default function Quote() {
             <span className="qw qw--ta">the</span>{' '}
             <span className="qw qw--hi">Spirit</span>
           </em>{' '}
-          with personal integrity, godly character,<br />
-          and moral courage — our conduct<br />
-          empowered by the Holy Spirit.
+          with personal integrity, godly character,
+          and moral courage — our conduct empowered by the Holy Spirit.
         </p>
         <div className="quote__cite">— Galatians 5:25</div>
         <div className="quote__motto">Motto: <em>"Thy Kingdom come"</em></div>
