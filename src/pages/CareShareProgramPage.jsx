@@ -46,45 +46,10 @@ function PhotoLightbox({ photos, startIdx, onClose }) {
   );
 }
 
-function ActivityPhotos({ photos }) {
-  const [lightbox, setLightbox] = useState(null);
-  const allPhotos = photos || [];
-  if (!allPhotos.length) return null;
-
-  return (
-    <>
-      <div className={`csp__photo-strip csp__photo-strip--${Math.min(allPhotos.length, 3)}`}>
-        {allPhotos.map((src, i) => (
-          <button
-            key={i}
-            className="csp__photo-thumb"
-            onClick={() => setLightbox(i)}
-            aria-label={`View photo ${i + 1}`}
-          >
-            <img src={src} alt="" loading="lazy" />
-            <div className="csp__photo-thumb-overlay">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
-                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-                <path d="M11 8v6M8 11h6"/>
-              </svg>
-            </div>
-          </button>
-        ))}
-      </div>
-      {lightbox !== null && (
-        <PhotoLightbox
-          photos={allPhotos}
-          startIdx={lightbox}
-          onClose={() => setLightbox(null)}
-        />
-      )}
-    </>
-  );
-}
-
 export default function CareShareProgramPage() {
   const { programId } = useParams();
   const program = getProgramById(programId);
+  const [lightbox, setLightbox] = useState(null);
 
   useEffect(() => {
     document.body.classList.add('nav-solid', 'nav-scrolled');
@@ -143,7 +108,7 @@ export default function CareShareProgramPage() {
         </div>
       </section>
 
-      {/* Activity log with photos */}
+      {/* Activity timeline */}
       <section className="csp__activities">
         <div className="container">
           <p className="csp__section-label">Activities &amp; Help Distribution</p>
@@ -151,17 +116,11 @@ export default function CareShareProgramPage() {
 
           <div className="csp__timeline">
             {program.activities.map((act, i) => (
-              <div
-                key={i}
-                className={`csp__timeline-item${act.photos?.length ? ' csp__timeline-item--has-photos' : ''}`}
-              >
-                {/* Left — date */}
+              <div key={i} className="csp__timeline-item">
                 <div className="csp__timeline-left">
                   <div className="csp__timeline-dot" />
                   <div className="csp__timeline-month">{act.month}</div>
                 </div>
-
-                {/* Right — content + photos */}
                 <div className="csp__timeline-right">
                   <h3 className="csp__timeline-title">{act.title}</h3>
                   <ul className="csp__timeline-list">
@@ -169,13 +128,46 @@ export default function CareShareProgramPage() {
                       <li key={j}>{item}</li>
                     ))}
                   </ul>
-                  <ActivityPhotos photos={act.photos} />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Photo gallery */}
+      {program.photos?.length > 0 && (
+        <section className="csp__gallery">
+          <div className="container">
+            <p className="csp__section-label">Programme Gallery</p>
+            <h2 className="csp__gallery-heading">Moments from <em>the field</em></h2>
+            <div className="csp__gallery-grid">
+              {program.photos.map((src, i) => (
+                <button
+                  key={i}
+                  className="csp__gallery-cell"
+                  onClick={() => setLightbox(i)}
+                  aria-label={`View photo ${i + 1}`}
+                >
+                  <img src={src} alt="" loading="lazy" />
+                  <div className="csp__gallery-cell-overlay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
+                      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/>
+                    </svg>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+          {lightbox !== null && (
+            <PhotoLightbox
+              photos={program.photos}
+              startIdx={lightbox}
+              onClose={() => setLightbox(null)}
+            />
+          )}
+        </section>
+      )}
 
       {/* Verse */}
       {program.verse && (

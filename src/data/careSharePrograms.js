@@ -15,6 +15,14 @@ export const careSharePrograms = [
       { num: '100+', label: 'Fed Every Month' },
       { num: '9', label: 'Towns Covered' },
     ],
+    photos: [
+      '/assets/care-share/uk/1.jpg',
+      '/assets/care-share/uk/2.jpg',
+      '/assets/care-share/uk/3.jpg',
+      '/assets/care-share/uk/4.jpg',
+      '/assets/care-share/uk/5.jpg',
+      '/assets/care-share/uk/6.jpg',
+    ],
     activities: [
       {
         month: 'December 2012',
@@ -23,9 +31,6 @@ export const careSharePrograms = [
           'Launched first food package distribution in Sheffield city centre',
           'Reached 40+ homeless individuals with hot meals and essential supplies',
           'Partnered with local volunteers to set up regular monthly outreach',
-        ],
-        photos: [
-          '/assets/care-share/uk/1.jpg',
         ],
       },
       {
@@ -36,10 +41,6 @@ export const careSharePrograms = [
           'Included fresh produce, tinned goods, and household essentials',
           'Expanded reach to Rotherham and Barnsley for the first time',
         ],
-        photos: [
-          '/assets/care-share/uk/2.jpg',
-          '/assets/care-share/uk/3.jpg',
-        ],
       },
       {
         month: 'November 2019',
@@ -48,10 +49,6 @@ export const careSharePrograms = [
           'Distributed warm clothing packages — coats, gloves, and scarves — to 120+ rough sleepers',
           'Hot soup and food parcels served at Sheffield city centre outreach point',
           'Collaborated with other local charities for joint distribution event',
-        ],
-        photos: [
-          '/assets/care-share/uk/4.jpg',
-          '/assets/care-share/uk/5.jpg',
         ],
       },
       {
@@ -70,9 +67,6 @@ export const careSharePrograms = [
           'Packed and distributed 150 Christmas hampers to struggling families',
           'Organised toy collection for children in low-income households',
           'Hot meals served to homeless individuals at Sheffield outreach point',
-        ],
-        photos: [
-          '/assets/care-share/uk/6.jpg',
         ],
       },
       {
@@ -122,6 +116,23 @@ export const careSharePrograms = [
       { num: '3', label: 'Villages Reached' },
       { num: '2', label: 'Major Campaigns' },
     ],
+    photos: [
+      '/assets/care-share/nepal/1.jpg',
+      '/assets/care-share/nepal/2.jpg',
+      '/assets/care-share/nepal/3.jpg',
+      '/assets/care-share/nepal/4.jpg',
+      '/assets/care-share/nepal/new-1.jpg',
+      '/assets/care-share/nepal/new-2.jpg',
+      '/assets/care-share/nepal/new-3.jpg',
+      '/assets/care-share/nepal/new-4.jpg',
+      '/assets/care-share/nepal/new-5.jpg',
+      '/assets/care-share/nepal/new-6.jpg',
+      '/assets/care-share/nepal/new-7.jpg',
+      '/assets/care-share/nepal/new-8.jpg',
+      '/assets/care-share/nepal/new-9.jpg',
+      '/assets/care-share/nepal/7.jpg',
+      '/assets/care-share/nepal/8.jpg',
+    ],
     activities: [
       {
         month: 'February 2018',
@@ -130,10 +141,6 @@ export const careSharePrograms = [
           'Church elders visited Nepal for the first time to assess community needs',
           'Met with local pastors and village leaders to identify the most vulnerable families',
           'Identified 3 key villages for initial outreach programmes',
-        ],
-        photos: [
-          '/assets/care-share/nepal/1.jpg',
-          '/assets/care-share/nepal/2.jpg',
         ],
       },
       {
@@ -144,10 +151,6 @@ export const careSharePrograms = [
           'Partnered with a local school to identify children who lacked basic learning materials',
           'Prayed with families and encouraged them in their faith',
         ],
-        photos: [
-          '/assets/care-share/nepal/3.jpg',
-          '/assets/care-share/nepal/4.jpg',
-        ],
       },
       {
         month: 'November 2018',
@@ -156,10 +159,6 @@ export const careSharePrograms = [
           'Distributed warm coats, jumpers, socks, and blankets to 200+ individuals',
           'Targeted mountain communities where winters are especially harsh',
           'Food packets distributed alongside clothing to 80 households',
-        ],
-        photos: [
-          '/assets/care-share/nepal/new-1.jpg',
-          '/assets/care-share/nepal/new-3.jpg',
         ],
       },
       {
@@ -170,10 +169,6 @@ export const careSharePrograms = [
           'Reached families in 2 additional villages beyond the original programme',
           'School stationery top-up distribution to 40 children',
         ],
-        photos: [
-          '/assets/care-share/nepal/7.jpg',
-          '/assets/care-share/nepal/8.jpg',
-        ],
       },
       {
         month: 'December 2019',
@@ -182,10 +177,6 @@ export const careSharePrograms = [
           'Extended winter clothing drive reached 300+ beneficiaries — largest campaign to date',
           'Blankets, warm clothing, and food packages distributed across 3 villages',
           'Child sponsorship programme launched — 12 children enrolled for annual support',
-        ],
-        photos: [
-          '/assets/care-share/nepal/new-2.jpg',
-          '/assets/care-share/nepal/new-4.jpg',
         ],
       },
       {
@@ -205,12 +196,6 @@ export const careSharePrograms = [
           'Doctors and nurses from the UK team provided consultations, check-ups, and medicines',
           'Over 100 children examined; medicines distributed free of charge to every family',
         ],
-        photos: [
-          '/assets/care-share/nepal/new-6.jpg',
-          '/assets/care-share/nepal/new-7.jpg',
-          '/assets/care-share/nepal/new-8.jpg',
-          '/assets/care-share/nepal/new-9.jpg',
-        ],
       },
       {
         month: 'October 2022',
@@ -228,9 +213,6 @@ export const careSharePrograms = [
           'Blankets, coats, and thermal wear distributed to 250+ individuals in mountain villages',
           'School bags and stationery kits given to 60+ children for the new academic year',
           'Food packages — rice, pulses, cooking oil — distributed to 100 households',
-        ],
-        photos: [
-          '/assets/care-share/nepal/new-5.jpg',
         ],
       },
     ],
@@ -253,6 +235,14 @@ export const careSharePrograms = [
       { num: '5', label: 'Communities Reached' },
       { num: 'Annual', label: 'Distribution Drives' },
     ],
+    photos: [
+      '/assets/care-share/kerala/1.jpg',
+      '/assets/care-share/kerala/2.jpg',
+      '/assets/care-share/kerala/3.jpg',
+      '/assets/care-share/kerala/4.jpg',
+      '/assets/care-share/kerala/5.jpg',
+      '/assets/care-share/kerala/6.jpg',
+    ],
     activities: [
       {
         month: 'April 2015',
@@ -262,9 +252,6 @@ export const careSharePrograms = [
           'First food distribution reached 60 families with rice, lentils, and cooking essentials',
           'Identified key areas of need for ongoing support',
         ],
-        photos: [
-          '/assets/care-share/kerala/1.jpg',
-        ],
       },
       {
         month: 'October 2016',
@@ -273,10 +260,6 @@ export const careSharePrograms = [
           'Emergency food packages distributed to 100+ families affected by seasonal flooding',
           'Clothing and household essentials provided to displaced families',
           'Coordinated with local volunteers for rapid response distribution',
-        ],
-        photos: [
-          '/assets/care-share/kerala/2.jpg',
-          '/assets/care-share/kerala/3.jpg',
         ],
       },
       {
@@ -297,10 +280,6 @@ export const careSharePrograms = [
           'Supported local relief camps with supplies and volunteer manpower',
           'Raised funds from UK congregation for ongoing flood relief efforts',
         ],
-        photos: [
-          '/assets/care-share/kerala/4.jpg',
-          '/assets/care-share/kerala/5.jpg',
-        ],
       },
       {
         month: 'March 2020',
@@ -318,9 +297,6 @@ export const careSharePrograms = [
           'Regular annual food distribution reached 150 families across 4 communities',
           'Cooking oil, rice, sugar, tea, and tinned goods included in each package',
           'Education supply kits distributed to 50 school-age children',
-        ],
-        photos: [
-          '/assets/care-share/kerala/6.jpg',
         ],
       },
       {
@@ -352,6 +328,18 @@ export const careSharePrograms = [
       { num: '200+', label: 'Children Reached' },
       { num: 'Quarterly', label: 'Visits & Distribution' },
     ],
+    photos: [
+      '/assets/care-share/chennai/1.jpg',
+      '/assets/care-share/chennai/2.jpg',
+      '/assets/care-share/chennai/3.jpg',
+      '/assets/care-share/chennai/4.jpg',
+      '/assets/care-share/chennai/5.jpg',
+      '/assets/care-share/chennai/6.jpg',
+      '/assets/care-share/chennai/new-1.jpg',
+      '/assets/care-share/chennai/new-2.jpg',
+      '/assets/care-share/chennai/new-3.jpg',
+      '/assets/care-share/chennai/new-4.jpg',
+    ],
     activities: [
       {
         month: 'January 2016',
@@ -360,10 +348,6 @@ export const careSharePrograms = [
           'First visit to a children\'s home in Chennai — met with 45 children',
           'Distributed food supplies: rice, lentils, milk powder, biscuits, and cooking oil',
           'Donated clothing, shoes, and school stationery to every child',
-        ],
-        photos: [
-          '/assets/care-share/chennai/1.jpg',
-          '/assets/care-share/chennai/2.jpg',
         ],
       },
       {
@@ -382,10 +366,6 @@ export const careSharePrograms = [
           'Organised a Christmas celebration for 120+ orphaned children across 2 homes',
           'Gifts, toys, and clothing distributed to every child',
           'Food packages including festive treats delivered to both orphanages',
-        ],
-        photos: [
-          '/assets/care-share/chennai/3.jpg',
-          '/assets/care-share/chennai/4.jpg',
         ],
       },
       {
@@ -414,10 +394,6 @@ export const careSharePrograms = [
           'Food and household supplies distributed to 200+ children across 3 homes',
           'School supply kits provided to all school-age children ahead of new academic year',
         ],
-        photos: [
-          '/assets/care-share/chennai/5.jpg',
-          '/assets/care-share/chennai/6.jpg',
-        ],
       },
       {
         month: 'June 2024',
@@ -426,12 +402,6 @@ export const careSharePrograms = [
           'Extended outreach to Tirunelveli, Tamil Nadu — partnering with local DCM Ministries church',
           'Food packages including rice, lentils, and essential groceries distributed to 80+ families',
           'Elderly, widows, and young families were prioritised for care and support',
-        ],
-        photos: [
-          '/assets/care-share/chennai/new-1.jpg',
-          '/assets/care-share/chennai/new-2.jpg',
-          '/assets/care-share/chennai/new-3.jpg',
-          '/assets/care-share/chennai/new-4.jpg',
         ],
       },
       {
@@ -464,6 +434,14 @@ export const careSharePrograms = [
       { num: '300+', label: 'Families Reached' },
       { num: 'Bi-Annual', label: 'Major Distributions' },
     ],
+    photos: [
+      '/assets/care-share/mumbai/1.jpg',
+      '/assets/care-share/mumbai/2.jpg',
+      '/assets/care-share/mumbai/3.jpg',
+      '/assets/care-share/mumbai/4.jpg',
+      '/assets/care-share/mumbai/5.jpg',
+      '/assets/care-share/mumbai/6.jpg',
+    ],
     activities: [
       {
         month: 'March 2017',
@@ -473,10 +451,6 @@ export const careSharePrograms = [
           'Food packages — rice, dal, oil, and spices — distributed to 70 families',
           'Met with community leaders to assess ongoing needs and plan future visits',
         ],
-        photos: [
-          '/assets/care-share/mumbai/1.jpg',
-          '/assets/care-share/mumbai/2.jpg',
-        ],
       },
       {
         month: 'October 2017',
@@ -485,9 +459,6 @@ export const careSharePrograms = [
           'Distributed clothing, footwear, and household essentials to 100 families',
           'Children\'s clothing and school supplies included in every family package',
           'Partnered with a local Mumbai church for on-ground support and translation',
-        ],
-        photos: [
-          '/assets/care-share/mumbai/3.jpg',
         ],
       },
       {
@@ -507,10 +478,6 @@ export const careSharePrograms = [
           'Food packets, clean water sachets, and waterproof sheets given to 150 families',
           'Partnered with two local organisations for rapid deployment of aid',
         ],
-        photos: [
-          '/assets/care-share/mumbai/4.jpg',
-          '/assets/care-share/mumbai/5.jpg',
-        ],
       },
       {
         month: 'December 2020',
@@ -528,9 +495,6 @@ export const careSharePrograms = [
           'Reached 4 slum communities in a single distribution drive — largest to date',
           'Food, clothing, and household essentials distributed to 280 families',
           'Community prayer meetings held at each location, led by local pastors',
-        ],
-        photos: [
-          '/assets/care-share/mumbai/6.jpg',
         ],
       },
       {
