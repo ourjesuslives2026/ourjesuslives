@@ -789,7 +789,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 .branches__map-text strong { font-style: normal; font-weight: 600; }
 
 /* STORY */
-.story { background: var(--c-blue); color: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; overflow: hidden; }
+.story { background: #000; color: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; overflow: hidden; }
 
 /* Top: photo + intro */
 .story__top { display: grid; grid-template-columns: 0.7fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
