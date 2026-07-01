@@ -72,12 +72,6 @@ export default function Story() {
               </p>
             </div>
           </div>
-          <div className="story__vm-divider" />
-          <div className="story__vm-motto">
-            <span className="story__vm-motto-label">OJLM Motto</span>
-            <span className="story__vm-motto-text">"Thy Kingdom come"</span>
-            <span className="story__vm-motto-ref">Galatians 5:25</span>
-          </div>
         </div>
 
       </div>
