@@ -67,7 +67,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/ourjesuslivesministries/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
             <a href="https://youtube.com/@ourjesuslives?si=sT70DsFcLTAxSIn3" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
             <a href="https://www.instagram.com/ourjesuslivesministries?igsh=MXNwbDk3dTQzeHpnOQ==" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-            <a href="#">WhatsApp ↗</a>
+
           </div>
         </div>
 
