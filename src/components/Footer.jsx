@@ -64,9 +64,9 @@ export default function Footer() {
 
           <div className="footer__col">
             <h5>Follow</h5>
-            <a href="#">Facebook ↗</a>
-            <a href="#">YouTube ↗</a>
-            <a href="#">Instagram ↗</a>
+            <a href="https://www.facebook.com/ourjesuslivesministries/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+            <a href="https://youtube.com/@ourjesuslives?si=sT70DsFcLTAxSIn3" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+            <a href="https://www.instagram.com/ourjesuslivesministries?igsh=MXNwbDk3dTQzeHpnOQ==" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
             <a href="#">WhatsApp ↗</a>
           </div>
         </div>
