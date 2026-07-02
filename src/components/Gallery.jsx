@@ -14,12 +14,6 @@ export const allPhotos = [
   { cat: 'branches',              tag: 'Branch',   desc: 'Church interior — congregation in worship',               img: '/assets/gallery/branches-2.jpg' },
 ];
 
-const filters = [
-  { key: 'all',      label: 'All' },
-  { key: 'worship',  label: 'Worship' },
-  { key: 'outreach', label: 'Outreach' },
-  { key: 'branches', label: 'Branches' },
-];
 
 export function Lightbox({ photos, index, onClose, onPrev, onNext }) {
   useEffect(() => {
@@ -57,7 +51,6 @@ export function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 }
 
 export default function Gallery() {
-  const [cat, setCat] = useState('all');
   const [lightboxIdx, setLightboxIdx] = useState(null);
   const headRef = useReveal();
   const masonryRef = useReveal();
@@ -73,27 +66,14 @@ export default function Gallery() {
     <section className="gallery" id="gallery">
       <div className="container">
         <div className="gallery__head reveal" ref={headRef}>
-          <div>
-            <h2 className="h-display">Life at <em>our ministries.</em></h2>
-          </div>
-          <div className="gallery__filter">
-            {filters.map(f => (
-              <button
-                key={f.key}
-                className={`chip${cat === f.key ? ' chip--active' : ''}`}
-                onClick={() => setCat(f.key)}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
+          <h2 className="h-display">Life at <em>our ministries.</em></h2>
         </div>
 
         <div className="masonry reveal" ref={masonryRef}>
           {allPhotos.map((c, i) => (
             <div
               key={i}
-              className={`m-cell${c.tall ? ' m-cell--tall' : ''}${c.wide ? ' m-cell--wide' : ''}${cat !== 'all' && c.cat !== cat ? ' is-hidden' : ''}`}
+              className={`m-cell${c.tall ? ' m-cell--tall' : ''}${c.wide ? ' m-cell--wide' : ''}`}
               data-cat={c.cat}
               onClick={() => openLightbox(i)}
               role="button"
