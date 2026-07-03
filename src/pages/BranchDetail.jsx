@@ -95,10 +95,11 @@ export default function BranchDetail() {
             <div className="bd__pastor-info">
               <div className="bd__pastor-name">{branch.pastor}</div>
               <div className="bd__pastor-role">{branch.pastoralRole}</div>
+              {branch.pastoralPhone && (
+                <div className="bd__pastor-phone">Phone: {branch.pastoralPhone}</div>
+              )}
               <p className="bd__pastor-desc">
-                Dedicated to serving the {branch.city} community through worship,
-                teaching and pastoral care — building a church where every person
-                is known, valued, and loved.
+                {branch.pastoralDesc || `Dedicated to serving the ${branch.city} community through worship, teaching and pastoral care — building a church where every person is known, valued, and loved.`}
               </p>
             </div>
           </div>
@@ -121,6 +122,29 @@ export default function BranchDetail() {
                 </div>
               )}
             </div>
+          </section>
+        )}
+
+        {/* Directions */}
+        {(branch.directionsCar || branch.directionsBus) && (
+          <section className="bd__section bd__directions">
+            <div className="bd__section-label">Getting Here</div>
+            {branch.directionsCar && (
+              <div className="bd__dir-block">
+                <h4 className="bd__dir-heading">By Car</h4>
+                {branch.directionsCar.map((d, i) => (
+                  <p key={i} className="bd__dir-para">{d}</p>
+                ))}
+              </div>
+            )}
+            {branch.directionsBus && (
+              <div className="bd__dir-block">
+                <h4 className="bd__dir-heading">By Bus</h4>
+                {branch.directionsBus.map((d, i) => (
+                  <p key={i} className="bd__dir-para">{d}</p>
+                ))}
+              </div>
+            )}
           </section>
         )}
 

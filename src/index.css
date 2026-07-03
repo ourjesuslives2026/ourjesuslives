@@ -1538,6 +1538,14 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   color: var(--c-muted); margin-bottom: 16px;
 }
 .bd__pastor-desc { color: var(--c-ink-2); line-height: 1.7; margin: 0; }
+.bd__pastor-phone { font-size: 0.875rem; color: var(--c-muted); margin: 4px 0 8px; }
+
+/* Directions */
+.bd__dir-block { margin-bottom: 28px; }
+.bd__dir-block:last-child { margin-bottom: 0; }
+.bd__dir-heading { font-family: var(--f-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-muted); margin: 0 0 12px; }
+.bd__dir-para { color: var(--c-ink-2); line-height: 1.75; margin: 0 0 10px; font-size: 0.95rem; }
+.bd__dir-para:last-child { margin-bottom: 0; }
 
 /* Service info */
 .bd__meta-grid { display: flex; flex-direction: column; gap: 0; }
