@@ -1356,11 +1356,20 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   .welcome__grid { grid-template-columns: 1fr; gap: 32px; }
   .welcome__video { order: -1; }
   .welcome__video-wrap { max-width: 240px; margin: 0 auto; }
-  .branches__head { grid-template-columns: 1fr; }
-  .branches__filter { justify-content: flex-start; }
+  .branches__head { grid-template-columns: 1fr; gap: 20px; margin-bottom: 28px; }
+  .branches__filter {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .branches__filter::-webkit-scrollbar { display: none; }
+  .chip { white-space: nowrap; flex-shrink: 0; }
   .branch-grid { grid-template-columns: 1fr; }
   .branch-card--feature { grid-column: span 1; flex-direction: column; }
-  .branch-card--feature .branch-card__photo { min-height: 240px; }
+  .branch-card--feature .branch-card__photo { min-height: 260px; }
   .min-bill { min-height: 420px; }
   .visit__grid { grid-template-columns: 1fr; }
   .visit__cards { grid-template-columns: 1fr; }
