@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import TopBar from '../components/TopBar';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { careSharePrograms } from '../data/careSharePrograms';
@@ -21,7 +20,6 @@ export default function CareSharePage() {
 
   return (
     <div className="cs">
-      <TopBar />
       <Nav />
 
       {/* Hero */}
