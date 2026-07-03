@@ -21,7 +21,7 @@ export const branches = [
     pastoralPhoto: '/assets/pastors.jpg',
     churchPhoto: '/assets/sheffield-fellowship.jpg',
     meta: [
-      { k: 'Sunday', v: '10:30am' },
+      { k: 'Sunday', v: '12:30pm' },
       { k: 'Address', v: 'A6135, Sheffield S5 7AF (Opp. Northern General Hospital)' },
       { k: 'Phone', v: '+44 7765 450545' },
     ],
