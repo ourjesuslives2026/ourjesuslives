@@ -447,6 +447,13 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   line-height: 0.88;
   letter-spacing: -0.01em;
 }
+.hero__inherit-img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
 .hero__inherit-word em {
   font-family: var(--f-serif);
   font-style: italic;
