@@ -118,7 +118,7 @@ export const branches = [
   },
   {
     id: 'chesterfield',
-    langs: ['en'],
+    langs: ['en', 'ml'],
     stripe: 'var(--c-blue)',
     name: 'Chesterfield Christian Church',
     shortName: 'Chesterfield Christian Church',
@@ -134,7 +134,7 @@ export const branches = [
   },
   {
     id: 'doncaster',
-    langs: ['en'],
+    langs: ['en', 'ml'],
     stripe: 'var(--c-red)',
     name: 'Doncaster Christian Church',
     shortName: 'Doncaster Christian Church',
