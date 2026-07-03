@@ -453,6 +453,7 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
   font-weight: 400;
   color: var(--c-cream);
   display: inline;
+  letter-spacing: 0.08em;
 }
 .hero__inherit-word b {
   font-family: 'Bebas Neue', var(--f-sans);
