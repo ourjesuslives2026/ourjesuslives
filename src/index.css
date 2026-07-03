@@ -449,8 +449,8 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
 }
 .hero__inherit-img {
   display: block;
-  width: 100%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 700px;
   height: auto;
   margin: 0 auto;
 }
