@@ -28,17 +28,6 @@ export default function CareSharePage() {
           <img src="/assets/care-share-hero.jpg" alt="" />
         </div>
         <div className="cs__hero-overlay" aria-hidden="true" />
-        <div className="container cs__hero-inner">
-          <img src="/assets/care-share-logo.png" alt="Care & Share logo" className="cs__logo" />
-          <div>
-            <p className="cs__eyebrow">Our Charity</p>
-            <h1 className="h-display cs__heading">Care <em>&amp; Share</em></h1>
-            <p className="lead cs__sub">
-              A non-profit organisation run by Our Jesus Lives Ministries, committed to
-              helping communities deprived of basic needs since 2012.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* About */}
