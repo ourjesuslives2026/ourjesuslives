@@ -27,7 +27,7 @@ export default function CareSharePage() {
       {/* Hero */}
       <section className="cs__hero">
         <div className="cs__hero-bg" aria-hidden="true">
-          <img src="/assets/care-share-nepal.jpg" alt="" />
+          <img src="/assets/care-share-hero.jpg" alt="" />
         </div>
         <div className="cs__hero-overlay" aria-hidden="true" />
         <div className="container cs__hero-inner">
