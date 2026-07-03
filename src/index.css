@@ -1622,28 +1622,15 @@ body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
    CARE & SHARE PAGE
 ───────────────────────────────────────── */
 .cs__hero {
-  position: relative;
-  padding: clamp(100px, 12vw, 160px) 0 clamp(60px, 7vw, 100px);
-  overflow: hidden;
-}
-.cs__hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  display: block;
+  line-height: 0;
 }
 .cs__hero-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  width: 100%;
+  height: auto;
   display: block;
-  filter: saturate(0.7);
 }
-.cs__hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(10,14,26,0.62);
-}
+.cs__hero-overlay { display: none; }
 .cs__hero-inner {
   position: relative;
   z-index: 2;
