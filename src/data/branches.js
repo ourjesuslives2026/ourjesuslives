@@ -20,6 +20,7 @@ export const branches = [
     pastoralDesc: 'Renjit Ambanattu is highly regarded for his zeal, boldness, innovation and vision as a leader. He is the Founder of "Our Jesus Lives Ministries" and Senior Pastor of Sheffield Christian Fellowship, UK — serving in apostolic grace and overseeing fellowships across the United Kingdom and abroad.',
     pastoralPhoto: '/assets/pastors.jpg',
     churchPhoto: '/assets/sheffield-fellowship.jpg',
+    heroPos: 'center bottom',
     meta: [
       { k: 'Sunday', v: '12:30pm' },
       { k: 'Address', v: 'A6135, Sheffield S5 7AF (Opp. Northern General Hospital)' },

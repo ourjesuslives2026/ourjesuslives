@@ -44,7 +44,7 @@ export default function BranchDetail() {
       {/* ── Hero ── */}
       <section className="bd__hero">
         <div className="bd__hero-img">
-          <img src={branch.churchPhoto} alt={branch.shortName} />
+          <img src={branch.churchPhoto} alt={branch.shortName} style={branch.heroPos ? { objectPosition: branch.heroPos } : undefined} />
           <div className="bd__hero-overlay" />
         </div>
         <div className="bd__hero-content">
