@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ourjesuslives.org/sitemap.xml
+Sitemap: https://www.ourjesuslives.com/sitemap.xml
