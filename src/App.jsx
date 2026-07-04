@@ -24,12 +24,12 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Our Jesus Lives Ministries | UK Church Family</title>
-        <meta name="description" content="A Christ-centred church family across the UK — worship, prayer, teaching and fellowship in English, Malayalam, Tamil and Hindi. Branches in Sheffield, Scunthorpe, Tipton and Mansfield." />
+        <title>Our Jesus Lives | Churches in Sheffield, Mansfield & Across the UK</title>
+        <meta name="description" content="Christ-centred churches in Sheffield, Scunthorpe, Tipton, Mansfield, Barnsley, Chesterfield & Doncaster — Sunday worship in Malayalam, Tamil, Hindi & English." />
         <link rel="canonical" href="https://www.ourjesuslives.com/" />
         <meta property="og:url" content="https://www.ourjesuslives.com/" />
-        <meta property="og:title" content="Our Jesus Lives Ministries | UK Church Family" />
-        <meta property="og:description" content="A Christ-centred church family across the UK — worship, prayer, teaching and fellowship in English, Malayalam, Tamil and Hindi. Branches in Sheffield, Scunthorpe, Tipton and Mansfield." />
+        <meta property="og:title" content="Our Jesus Lives | Churches in Sheffield, Mansfield & Across the UK" />
+        <meta property="og:description" content="Christ-centred churches in Sheffield, Scunthorpe, Tipton, Mansfield, Barnsley, Chesterfield & Doncaster — Sunday worship in Malayalam, Tamil, Hindi & English." />
       </Helmet>
       <TopBar />
       <Nav />
