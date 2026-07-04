@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { getBranchById, branches, langLabel } from '../data/branches';
 import TopBar from '../components/TopBar';
 import Nav from '../components/Nav';
@@ -29,6 +30,31 @@ export default function BranchDetail() {
   const otherBranches = branches.filter(b => b.id !== branch.id);
   const embedSrc = getEmbedSrc(branch.mapUrl);
 
+  const pageUrl = `https://www.ourjesuslives.com/branch/${branch.id}`;
+  const pageTitle = `${branch.shortName} | Our Jesus Lives Ministries`;
+  const phone = branch.pastoralPhone || branch.meta?.find(m => ['Phone','Contact'].includes(m.k))?.v;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Church',
+    name: branch.shortName,
+    description: branch.desc,
+    url: pageUrl,
+    ...(phone && { telephone: phone }),
+    ...(branch.addr && {
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: branch.addr,
+        addressLocality: branch.city,
+        addressCountry: 'GB',
+      },
+    }),
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Our Jesus Lives Ministries',
+      url: 'https://www.ourjesuslives.com',
+    },
+  };
+
   // Keep nav in solid (non-transparent) state on detail pages
   useEffect(() => {
     document.body.classList.add('nav-solid', 'nav-scrolled');
@@ -37,6 +63,20 @@ export default function BranchDetail() {
 
   return (
     <div className="bd">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={branch.desc} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={branch.desc} />
+        <meta property="og:image" content="https://www.ourjesuslives.com/assets/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={branch.desc} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
       <TopBar />
       <Nav />
 
