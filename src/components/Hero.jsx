@@ -4,10 +4,12 @@ const slides = [
   {
     src: '/assets/inheritance.jpg',
     alt: '2026 — Possessing Our Inheritance',
+    pos: 'center 30%',
   },
   {
     src: '/assets/hero-church.jpg',
     alt: 'Our church family gathered in worship',
+    pos: 'center bottom',
   },
 ];
 
@@ -52,6 +54,7 @@ export default function Hero() {
             src={slides[prev].src}
             alt=""
             className="hero__slide hero__slide--out"
+            style={{ objectPosition: slides[prev].pos }}
           />
         )}
         <img
@@ -59,6 +62,7 @@ export default function Hero() {
           src={slides[current].src}
           alt={slides[current].alt}
           className={`hero__slide hero__slide--in${fading ? ' hero__slide--entering' : ''}`}
+          style={{ objectPosition: slides[current].pos }}
         />
       </div>
 
