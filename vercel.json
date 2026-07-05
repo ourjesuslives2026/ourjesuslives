@@ -1,3 +1,18 @@
 {
+  "redirects": [
+    { "source": "/home",                              "destination": "/",                        "permanent": true },
+    { "source": "/about-us",                          "destination": "/",                        "permanent": true },
+    { "source": "/who-we-are",                        "destination": "/",                        "permanent": true },
+    { "source": "/religious-community",               "destination": "/",                        "permanent": true },
+    { "source": "/revive-uk-europe",                  "destination": "/",                        "permanent": true },
+    { "source": "/quotes",                            "destination": "/",                        "permanent": true },
+    { "source": "/youths",                            "destination": "/youth",                   "permanent": true },
+    { "source": "/sheffield-christian-fellowship",    "destination": "/branch/sheffield-main",   "permanent": true },
+    { "source": "/sheffield-tamil-church",            "destination": "/branch/sheffield-tamil",  "permanent": true },
+    { "source": "/sheffield-hindi-church",            "destination": "/branch/sheffield-hindi",  "permanent": true },
+    { "source": "/scunthorpe-christian-fellowship",   "destination": "/branch/scunthorpe",       "permanent": true },
+    { "source": "/tipton-christian-fellowship",       "destination": "/branch/tipton",           "permanent": true },
+    { "source": "/mansfield-christian-fellowship",    "destination": "/branch/mansfield",        "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

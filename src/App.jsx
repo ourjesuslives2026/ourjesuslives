@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import TopBar from './components/TopBar';
 import Nav from './components/Nav';
@@ -61,6 +61,7 @@ export default function App() {
         <Route path="/care-share" element={<CareSharePage />} />
         <Route path="/care-share/:programId" element={<CareShareProgramPage />} />
         <Route path="/youth" element={<YouthPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
