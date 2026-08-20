@@ -82,7 +82,7 @@ export default function Footer() {
             <h5>Connect</h5>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
-            <a href="#">Donations</a>
+            <a href="/care-share#donate">Donations</a>
             <a href="#visit">Plan Your Visit</a>
           </div>
 

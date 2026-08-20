@@ -86,7 +86,7 @@ export default function CareSharePage() {
       </section>
 
       {/* Donate */}
-      <section className="cs__donate">
+      <section className="cs__donate" id="donate">
         <div className="container cs__donate-inner">
           <div className="cs__donate-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
