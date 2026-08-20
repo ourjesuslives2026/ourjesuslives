@@ -18,7 +18,7 @@ export default function Story() {
           </div>
           <div className="story__intro">
             <h2 className="h-display h-display--light">
-              From a single<br />fellowship to<br />a family of <em>nine.</em>
+              Rooted in fellowship.<br />Growing without <em>limits.</em>
             </h2>
             <p>
               Our Jesus Lives Ministries was founded with a clear mission: to share
