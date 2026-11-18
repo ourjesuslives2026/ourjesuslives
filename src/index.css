@@ -204,14 +204,8 @@ body:not(.nav-scrolled) .nav__menu-btn span { background: var(--c-cream); }
   width: 100%; height: 100%; display: block;
   transition: filter 0.3s ease;
 }
-body:not(.nav-scrolled):not(.nav-solid) .nav__logo img,
-body:not(.nav-scrolled):not(.nav-solid) .nav__logo svg {
-  filter: brightness(0) invert(1);
-}
-body.nav-scrolled .nav__logo img,
-body.nav-scrolled .nav__logo svg,
-body.nav-solid .nav__logo img,
-body.nav-solid .nav__logo svg {
+.nav__logo img,
+.nav__logo svg {
   filter: none;
 }
 .nav__wordmark { display: flex; flex-direction: column; line-height: 1.1; white-space: nowrap; }
@@ -248,9 +242,7 @@ body:not(.nav-scrolled) .nav__links a.is-active { background: rgba(255,255,255,0
 .nav__cta-wrap { display: flex; align-items: center; gap: 10px; }
 .nav__secondary-logo { display: flex; align-items: center; }
 .nav__secondary-logo img { height: 32px; width: auto; display: block; }
-body:not(.nav-scrolled):not(.nav-solid) .nav__secondary-logo img { filter: brightness(0) invert(1); }
-body.nav-scrolled .nav__secondary-logo img,
-body.nav-solid .nav__secondary-logo img { filter: brightness(0); }
+.nav__secondary-logo img { filter: brightness(0); }
 .nav__cta-wrap .btn { height: 36px; padding: 0 16px; font-size: 16px; font-family: var(--f-sans); line-height: 1; }
 .nav__cta-wrap .btn--ghost-sm { height: 36px; padding: 0 14px; font-size: 16px; font-family: var(--f-sans); letter-spacing: normal; line-height: 1; }
 .nav__menu-btn {
