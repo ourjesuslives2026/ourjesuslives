@@ -125,6 +125,24 @@ export default function YouthPage() {
         </div>
       </section>
 
+      {/* Leadership */}
+      <section className="yp__section yp__leaders">
+        <div className="container">
+          <p className="yp__section-label">Leadership</p>
+          <div className="yp__leader-card">
+            <div className="yp__leader-photo">
+              <img src="/assets/youth-leaders.jpg" alt="Bro. Sam & Asha" />
+            </div>
+            <div className="yp__leader-info">
+              <div className="yp__leader-name">Bro. Sam &amp; Asha</div>
+              <p className="yp__leader-desc">
+                Dedicated to building the next generation for Christ — leading our youth ministry with passion, faith, and a heart for young people to encounter the living God.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Photo mosaic */}
       <section className="yp__photos" aria-label="Youth ministry photos">
         <div className="yp__photo-grid">
