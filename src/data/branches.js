@@ -168,7 +168,7 @@ export const branches = [
       'Whether you are new to the area, seeking a church home, or exploring the Christian faith, you will find a warm welcome among us. We look forward to worshipping and growing together in God\'s love.',
     ],
     verse: { text: 'Let the message of Christ dwell among you richly as you teach and admonish one another with all wisdom.', ref: 'Colossians 3:16' },
-    pastor: 'Merin & Ansu',
+    pastor: 'Bro. Merin & Ansu',
     pastoralRole: 'Leadership',
     pastoralPhoto: '/assets/barnsley-pastor.jpg',
     churchPhoto: '/assets/hero2.jpg',
