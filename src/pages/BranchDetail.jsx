@@ -134,7 +134,6 @@ export default function BranchDetail() {
             </div>
             <div className="bd__pastor-info">
               <div className="bd__pastor-name">{branch.pastor}</div>
-              <div className="bd__pastor-role">{branch.pastoralRole}</div>
               {branch.pastoralPhone && (
                 <div className="bd__pastor-phone">Phone: {branch.pastoralPhone}</div>
               )}
