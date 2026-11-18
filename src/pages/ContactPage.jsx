@@ -141,21 +141,17 @@ export default function ContactPage() {
             <div className="cp__social">
               <p className="cp__social-label">Follow us</p>
               <div className="cp__social-links">
-                <a href="#" className="cp__social-btn" aria-label="Facebook">
+                <a href="https://www.facebook.com/ourjesuslivesministries/" target="_blank" rel="noopener noreferrer" className="cp__social-btn" aria-label="Facebook">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   Facebook
                 </a>
-                <a href="#" className="cp__social-btn" aria-label="YouTube">
+                <a href="https://youtube.com/@ourjesuslives?si=sT70DsFcLTAxSIn3" target="_blank" rel="noopener noreferrer" className="cp__social-btn" aria-label="YouTube">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 6.2a2.8 2.8 0 0 0-2-2C18.9 4 12 4 12 4s-6.9 0-8.5.2a2.8 2.8 0 0 0-2 2C1.3 7.8 1.3 12 1.3 12s0 4.2.2 5.8a2.8 2.8 0 0 0 2 2C5.1 20 12 20 12 20s6.9 0 8.5-.2a2.8 2.8 0 0 0 2-2c.2-1.6.2-5.8.2-5.8s0-4.2-.2-5.8zM9.8 15.2V8.8l6 3.2-6 3.2z"/></svg>
                   YouTube
                 </a>
-                <a href="#" className="cp__social-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/ourjesuslivesministries?igsh=MXNwbDk3dTQzeHpnOQ==" target="_blank" rel="noopener noreferrer" className="cp__social-btn" aria-label="Instagram">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                   Instagram
-                </a>
-                <a href="#" className="cp__social-btn" aria-label="WhatsApp">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9s-.5-.1-.7.1-.7.9-.9 1.1-.3.2-.6 0a8 8 0 0 1-2.3-1.4 8.4 8.4 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.1-.3.2-.5s0-.4 0-.5-.6-1.6-.9-2.1-.4-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4 4 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg>
-                  WhatsApp
                 </a>
               </div>
             </div>
