@@ -95,49 +95,43 @@ export default function YouthPage() {
         </div>
       </section>
 
-      {/* Mission statement */}
+      {/* Mission + Leadership combined */}
       <section className="yp__mission">
-        <div className="container yp__mission-grid">
-          <div>
+        <div className="container yp__mission-split">
+          {/* Left — Who We Are */}
+          <div className="yp__mission-left">
             <p className="yp__section-label">Who We Are</p>
             <h2 className="yp__mission-heading">
               Youth's 4 Him have<br />decided to <em>follow Jesus</em>
             </h2>
-          </div>
-          <div className="yp__mission-body">
-            <p>
-              We are a church praying for Revival to happen again in this land. We know
-              it's our young generation who will lead the church tomorrow. At OJLM, we
-              have our dedicated youth ministry team to encourage, support and build our
-              youngsters to take over the baton and win souls to Jesus.
-            </p>
-            <p>
-              Youth's 4 Him has decided to follow Jesus. <strong>Are you in?</strong> If you
-              are in, then come and experience the life-changing God. Why not join us —
-              last Saturday of every month, we gather together with worship, word,
-              activities, discussions and lot more!
-            </p>
-            <div className="yp__cta-inline">
-              <a href="#meet" className="btn btn--primary">Find Out When We Meet ↓</a>
-              <Link to="/contact" className="btn btn--ghost">Get in Touch</Link>
+            <div className="yp__mission-body">
+              <p>
+                We are a church praying for Revival to happen again in this land. We know
+                it's our young generation who will lead the church tomorrow. At OJLM, we
+                have our dedicated youth ministry team to encourage, support and build our
+                youngsters to take over the baton and win souls to Jesus.
+              </p>
+              <p>
+                Youth's 4 Him has decided to follow Jesus. <strong>Are you in?</strong> If you
+                are in, then come and experience the life-changing God. Why not join us —
+                last Saturday of every month, we gather together with worship, word,
+                activities, discussions and lot more!
+              </p>
+              <div className="yp__cta-inline">
+                <a href="#meet" className="btn btn--primary">Find Out When We Meet ↓</a>
+                <Link to="/contact" className="btn btn--ghost">Get in Touch</Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Leadership */}
-      <section className="yp__section yp__leaders">
-        <div className="container">
-          <p className="yp__section-label">Leadership</p>
-          <div className="yp__leader-card">
+          {/* Right — Leadership photo */}
+          <div className="yp__mission-right">
             <div className="yp__leader-photo">
               <img src="/assets/youth-leaders.jpg" alt="Bro. Sam & Asha" />
             </div>
-            <div className="yp__leader-info">
+            <div className="yp__leader-caption">
+              <p className="yp__section-label" style={{marginBottom: '4px'}}>Leadership</p>
               <div className="yp__leader-name">Bro. Sam &amp; Asha</div>
-              <p className="yp__leader-desc">
-                Dedicated to building the next generation for Christ — leading our youth ministry with passion, faith, and a heart for young people to encounter the living God.
-              </p>
             </div>
           </div>
         </div>

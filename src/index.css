@@ -2457,6 +2457,27 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   gap: clamp(40px, 6vw, 80px);
   align-items: start;
 }
+.yp__mission-split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.yp__mission-left { }
+.yp__mission-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.yp__leader-caption { text-align: center; }
+.yp__leader-name {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  color: var(--c-ink);
+  margin: 0;
+}
 .yp__section-label {
   font-family: var(--f-mono);
   font-size: 12px;
@@ -2485,43 +2506,19 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .yp__mission-body p:last-of-type { margin-bottom: 28px; }
 .yp__cta-inline { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* Leadership */
-.yp__leaders { padding: 72px 0; }
-.yp__leader-card {
-  display: flex;
-  gap: 48px;
-  align-items: center;
-  max-width: 820px;
-  margin: 32px auto 0;
-}
+/* Leadership photo */
 .yp__leader-photo {
-  flex-shrink: 0;
-  width: 220px;
-  height: 260px;
+  width: 320px;
+  height: 420px;
   border-radius: 12px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .yp__leader-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-}
-.yp__leader-name {
-  font-family: var(--f-serif);
-  font-size: 28px;
-  color: var(--c-ink);
-  margin-bottom: 14px;
-}
-.yp__leader-desc {
-  color: var(--c-muted);
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 0;
-}
-@media (max-width: 600px) {
-  .yp__leader-card { flex-direction: column; gap: 24px; }
-  .yp__leader-photo { width: 100%; height: 280px; }
 }
 
 /* Photo mosaic */
@@ -2710,6 +2707,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* Responsive */
 @media (max-width: 900px) {
   .yp__mission-grid { grid-template-columns: 1fr; }
+  .yp__mission-split { grid-template-columns: 1fr; }
+  .yp__mission-right { flex-direction: row; justify-content: flex-start; align-items: flex-end; }
+  .yp__leader-photo { width: 160px; height: 200px; }
   .yp__what-grid { grid-template-columns: repeat(2, 1fr); }
   .yp__photo-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
   .yp__photo-cell--1 { grid-column: span 2; grid-row: span 1; }
