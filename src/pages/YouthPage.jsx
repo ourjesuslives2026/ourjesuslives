@@ -48,14 +48,6 @@ const whatWeDo = [
   },
 ];
 
-const photos = [
-  { src: '/assets/gallery/family-1.jpg',   alt: 'Youth commissioning gathering' },
-  { src: '/assets/gallery/kids-1.jpg',     alt: 'Young people celebrating with nations flags' },
-  { src: '/assets/gallery/worship-4.jpg',  alt: 'Worship team leading youth in song' },
-  { src: '/assets/gallery/family-2.jpg',   alt: 'Families worshipping together' },
-  { src: '/assets/gallery/kids-2.jpg',     alt: 'Youth in prayer at Sunday service' },
-  { src: '/assets/gallery/worship-5.jpg',  alt: 'Congregation hands raised in worship' },
-];
 
 export default function YouthPage() {
   useEffect(() => {
@@ -137,16 +129,6 @@ export default function YouthPage() {
         </div>
       </section>
 
-      {/* Photo mosaic */}
-      <section className="yp__photos" aria-label="Youth ministry photos">
-        <div className="yp__photo-grid">
-          {photos.map((p, i) => (
-            <div key={i} className={`yp__photo-cell yp__photo-cell--${i + 1}`}>
-              <img src={p.src} alt={p.alt} loading="lazy" />
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* What we do */}
       <section className="yp__what">
