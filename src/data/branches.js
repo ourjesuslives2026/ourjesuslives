@@ -62,7 +62,7 @@ export const branches = [
       text: 'Lift up your heads, ye gates; Lift up, ye eternal doors, and the King of glory shall enter. Who is this King of Glory? He is the Lord of hosts; He is the King of glory.',
       ref: 'Psalm 24:9-10',
     },
-    pastor: 'Bro. Joash, Divya & Hazel',
+    pastor: 'Pr. Joash & Divya',
     pastoralRole: 'Pastor',
     pastoralPhoto: '/assets/sheffield-tamil-1.jpg',
     churchPhoto: '/assets/sheffield-tamil-2.jpg',
